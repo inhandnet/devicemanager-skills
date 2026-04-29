@@ -1,0 +1,13 @@
+{
+  "name": "devicemanager-skills",
+  "owner": {
+    "name": "inhandnet"
+  },
+  "plugins": [
+    {
+      "name": "devicemanager",
+      "source": "./",
+      "description": "Skills for managing Device Manager platform via devicemanager CLI"
+    }
+  ]
+}
