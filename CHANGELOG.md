@@ -2,9 +2,18 @@
 
 ## v0.1.0 (2026-04-29)
 
-### Added
+### New Features
 
-- 初始版本
-- 主技能定义 `SKILL.md`，覆盖设备管理、设备组、隧道、DRC、边缘计算、固件升级等场景
-- 参考文档：诊断排障、信号分析、边缘计算、DRC 模板、设备配置、隧道管理、固件升级、流量分析
-- 命令参考文档，覆盖所有 CLI 子命令
+- **Main skill definition** (`SKILL.md`) — "DM 管家" persona with full command cheatsheet, operational rules, safety rules, and context-aware reference loading
+- **98 command reference docs** — auto-generated from [devicemanager-cli](https://github.com/inhandnet/devicemanager-cli), covering all subcommands with flags, examples, and descriptions
+
+### Reference Guides
+
+- **Diagnostics** — device offline troubleshooting workflow (status check → signal → alerts → config → reboot)
+- **Signal analysis** — cellular signal metrics interpretation (RSSI/RSRP/SINR/RSRQ) with quality thresholds
+- **Edge computing** — engine/app/version/config management and deployment workflows
+- **DRC templates** — batch configuration deployment via Device Remote Configuration
+- **Device config** — single-device config get/set workflow with safety guidelines
+- **Tunnels** — remote tunnel creation, connection, and port forwarding scenarios
+- **Firmware upgrade** — single and batch OTA upgrade workflows with safety checks
+- **Traffic analysis** — monthly/daily traffic statistics and anomaly investigation
