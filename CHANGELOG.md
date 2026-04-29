@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.2 (2026-04-29)
+
+### Improvements
+
+- **Command references**: Add `-y/--yes` skip confirmation prompt flag to all 11 destructive commands (delete, remove, kick, reboot)
+
+---
+
 ## v0.1.1 (2026-04-29)
 
 ### Improvements
