@@ -1,17 +1,16 @@
 ## devicemanager device traffic monthly
 
-Query monthly traffic for devices (YYYYMM)
+Query monthly traffic for a device (YYYYMM)
 
 ### Examples
 
 ```
-  devicemanager device traffic monthly 202604 --device <device-id>
-  devicemanager device traffic monthly 202604 --device <id1> --device <id2>
+  devicemanager device traffic monthly 202604 <device-id>
 ```
 
 ### Options
 
 ```
-  <month>              Month in YYYYMM format (required positional argument)
-      --device strings  Device IDs (required, can be specified multiple times)
+  <month>      Month in YYYYMM format (required positional argument)
+  <device-id>  Device ID (required positional argument)
 ```
