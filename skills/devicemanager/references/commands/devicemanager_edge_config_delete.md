@@ -13,4 +13,5 @@ Delete an edge app config
 ```
   <app-id>     App ID (required positional argument)
   <config-id>  Config ID (required positional argument)
+  -y, --yes    Skip confirmation prompt
 ```

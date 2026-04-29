@@ -12,4 +12,5 @@ Delete an edge app
 
 ```
   <app-id>  App ID (required positional argument)
+  -y, --yes Skip confirmation prompt
 ```

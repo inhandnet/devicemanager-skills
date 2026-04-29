@@ -12,4 +12,5 @@ Delete an edge agent
 
 ```
   <agent-id>  Agent ID (required positional argument)
+  -y, --yes   Skip confirmation prompt
 ```

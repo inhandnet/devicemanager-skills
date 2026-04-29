@@ -13,4 +13,5 @@ Cancel a device firmware upgrade task
 ```
   <firmware-id>  Firmware ID (required positional argument)
   <device-id>    Device ID (required positional argument)
+  -y, --yes      Skip confirmation prompt
 ```

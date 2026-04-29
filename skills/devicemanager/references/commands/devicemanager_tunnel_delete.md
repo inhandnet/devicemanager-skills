@@ -12,4 +12,5 @@ Delete a tunnel
 
 ```
   <tunnel-id>  Tunnel ID (required positional argument)
+  -y, --yes    Skip confirmation prompt
 ```

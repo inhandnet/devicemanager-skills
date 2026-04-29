@@ -13,4 +13,5 @@ Delete an edge app version
 ```
   <app-id>   App ID (required positional argument)
   <version>  Version string (required positional argument)
+  -y, --yes  Skip confirmation prompt
 ```

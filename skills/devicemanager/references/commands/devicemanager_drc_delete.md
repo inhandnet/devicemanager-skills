@@ -12,4 +12,5 @@ Delete a DRC template
 
 ```
   <template-id>  Template ID (required positional argument)
+  -y, --yes      Skip confirmation prompt
 ```

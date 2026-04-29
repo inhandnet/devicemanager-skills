@@ -13,4 +13,5 @@ Reboot a device
 
 ```
       --timeout int  Timeout in milliseconds (default 15000)
+  -y, --yes          Skip confirmation prompt
 ```

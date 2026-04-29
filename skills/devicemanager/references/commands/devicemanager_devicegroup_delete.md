@@ -12,4 +12,5 @@ Delete a device group
 
 ```
   <group-id>  Group ID (required positional argument)
+  -y, --yes   Skip confirmation prompt
 ```

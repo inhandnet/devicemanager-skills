@@ -12,4 +12,5 @@ Force disconnect a device
 
 ```
   <device-id>  Device ID (required positional argument)
+  -y, --yes    Skip confirmation prompt
 ```
