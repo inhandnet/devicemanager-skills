@@ -1,81 +1,163 @@
-# Device Manager Skills
+Agent skills for managing InHand Networks [Device Manager](https://iot.inhand.com.cn) platform via the `devicemanager` CLI.
 
-[Agent Skills](https://agentskills.io) for managing Device Manager platform via `devicemanager` CLI.
+These skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code and Codex CLI.
 
-## Features
+## What can it do?
 
-- **设备管理** — 查询设备列表、在线状态、信号质量、连接客户端、流量统计
-- **设备诊断** — 离线排查、信号分析、远程重启、强制踢下线
-- **设备配置** — 获取/下发设备配置
-- **设备分组** — 创建、管理设备组，批量添加/移除设备
-- **远程隧道** — 创建隧道、连接/断开、端口转发
-- **DRC 模板** — 配置模板管理，批量下发配置到设备
-- **边缘计算** — 管理边缘引擎、应用、版本、配置，远程启停控制
-- **固件升级** — 固件管理、单台/批量 OTA 升级
+Once installed, talk to your AI agent in natural language to manage your Device Manager platform — no need to memorize CLI commands.
+
+- **Device monitoring** — check device status, find offline devices, view signal quality, connected clients, traffic statistics
+- **Remote diagnostics** — signal analysis (RSSI/SINR/RSRP), remote reboot, force disconnect
+- **Configuration** — read/push device config, DRC templates for batch config deployment
+- **Device groups** — create and manage groups, batch add/remove devices
+- **Remote tunnels** — create tunnels, connect/disconnect, port forwarding to device services
+- **Edge computing** — manage edge engines, applications, versions, configs, remote start/stop/restart
+- **Firmware upgrades** — check available firmware, single/batch OTA upgrades, track progress
+- **Alerts** — view device alerts, filter by state
 
 ## Prerequisites
 
-- Device Manager 平台账号
-- `devicemanager` CLI（技能首次使用时会自动安装，或从 [devicemanager-cli](https://github.com/inhandnet/devicemanager-cli) 手动安装）
+- A [Device Manager](https://iot.inhand.com.cn) account
+
+> [!NOTE]
+> The [`devicemanager` CLI](https://github.com/inhandnet/devicemanager-cli) is required but you don't need to install it beforehand — the skill will guide Claude through the CLI installation and login automatically on first use. You can also [install it manually](https://github.com/inhandnet/devicemanager-cli) if you prefer.
 
 ## Installation
 
-### Claude Code
+### Claude Code Plugin
 
-```bash
-# CLI
-claude skill add --source github:inhandnet/devicemanager-skills
+Works on all Claude Code platforms — CLI, Desktop App, Web ([claude.ai/code](https://claude.ai/code)), and IDE extensions (VS Code, JetBrains).
 
-# Desktop / Web / IDE Extension
-# Settings → Skills → Add Skill → github:inhandnet/devicemanager-skills
+1. **Add the marketplace** (only needed once):
+
+   ```
+   /plugin marketplace add inhandnet/devicemanager-skills
+   ```
+
+2. **Install the plugin**:
+
+   ```
+   /plugin install devicemanager@devicemanager-skills
+   ```
+
+3. **Activate** — start a new session for the plugin to take effect:
+   - **CLI**: exit and re-run `claude`
+   - **Desktop App / Web**: open a new conversation
+   - **IDE extensions**: restart the Claude Code panel
+
+4. **Verify** — the plugin is loaded when you see `devicemanager` listed in `/plugin > Installed`.
+
+> [!TIP]
+> **Desktop App**: click the **+** button next to the prompt box → **Plugins** → **Add plugin** to browse and install from the plugin manager UI.
+
+> [!TIP]
+> **Interactive browser (CLI / IDE)**: run `/plugin`, go to the **Discover** tab, find **devicemanager**, and select your preferred installation scope (User / Project / Local).
+
+> [!TIP]
+> **Terminal commands** (outside the REPL):
+> ```bash
+> claude plugin marketplace add inhandnet/devicemanager-skills
+> claude plugin install devicemanager@devicemanager-skills
+> ```
+> The plugin will be active on the next Claude Code session.
+
+#### Install for your team
+
+To share the plugin with all project collaborators, install with **project scope**:
+
+In the REPL, run `/plugin`, go to **Discover**, select **devicemanager**, and choose **Project** scope. This adds the marketplace and plugin to `.claude/settings.json`, so teammates get it automatically when they trust the project folder.
+
+#### Update
+
+```
+/plugin update devicemanager@devicemanager-skills
+```
+
+#### Uninstall
+
+```
+/plugin uninstall devicemanager@devicemanager-skills
 ```
 
 ### Codex CLI
 
+Copy the `skills/devicemanager` directory into one of the [Codex skills directories](https://developers.openai.com/codex/skills):
+
 ```bash
-codex skill add github:inhandnet/devicemanager-skills
+# User-level (available in all projects)
+cp -r skills/devicemanager ~/.agents/skills/
+
+# Or project-level (shared with team via git)
+cp -r skills/devicemanager .agents/skills/
+```
+
+### Load without installing (session only)
+
+If you have a local clone of this repo, you can load it into Claude Code for a single session:
+
+```bash
+claude --plugin-dir /path/to/devicemanager-skills
 ```
 
 ## Usage
 
-技能会自动识别用户意图并激活：
+The skill supports both English and Chinese. In most cases, just describe what you need — Claude automatically activates the skill when it detects requests related to:
+
+- Device management (list, status, offline troubleshooting)
+- Signal analysis, remote reboot, force disconnect
+- Configuration, DRC templates, firmware upgrades
+- Device groups, remote tunnels
+- Edge computing (engines, apps, versions, deployment)
 
 ```
-> 查看所有在线设备
-> 帮我看一下 IR915L 的信号质量
-> 把这批设备加入 "华东区" 分组
-> 给设备创建一个远程隧道
-> 部署边缘应用到设备
+You:    Show me all offline devices
+Claude: [Automatically loads the devicemanager skill, lists offline devices]
+
+You:    What's the signal quality of device GR543210?
+Claude: [Queries signal history and analyzes RSSI/SINR/RSRP]
+
+You:    Deploy edge app v2.0 to the "East Region" group
+Claude: [Deploys the specified version to all devices in the group]
 ```
 
-也可以通过 `/devicemanager` 显式调用：
+> [!TIP]
+> **How to tell the skill is active:**
+> - **CLI / IDE**: look for the loading indicator in the output:
+>   ```
+>   ⏺ Skill(devicemanager:devicemanager)
+>     ⎿  Successfully loaded skill
+>   ```
+> - **Desktop App / Web**: the skill name appears highlighted in the prompt area when invoked, or Claude starts running `devicemanager` commands in its response.
+
+You can also invoke it explicitly — type `/` in the prompt box to browse available skills, or type `/devicemanager` directly:
 
 ```
-> /devicemanager 列出所有离线设备
+/devicemanager List all offline devices
+/devicemanager Check signal quality for device GR543210
+/devicemanager Create a remote tunnel to device IR915001
+/devicemanager Schedule a firmware upgrade for all IR915 devices
+/devicemanager Add these devices to the "East Region" group
+/devicemanager Deploy edge config to device group
 ```
 
 ## Troubleshooting
 
-### `devicemanager: command not found`
+### "devicemanager: command not found"
 
-手动安装 CLI：
+The `devicemanager` CLI is not installed. Follow the installation instructions at [devicemanager-cli](https://github.com/inhandnet/devicemanager-cli).
 
-```bash
-# macOS / Linux
-go install github.com/inhandnet/devicemanager-cli/cmd/devicemanager@latest
+### "unauthorized" or "401" errors
 
-# 或下载预编译二进制
-# https://github.com/inhandnet/devicemanager-cli/releases
-```
+Your CLI session has expired. Run `devicemanager auth login` to re-authenticate.
 
-### 认证失败
+### Plugin skills not appearing after installation
 
-```bash
-devicemanager auth login
-```
+1. Run `/reload-plugins` to reload all plugins
+2. Check `/plugin > Errors` for any loading errors
+3. If the issue persists, try `claude plugin uninstall devicemanager@devicemanager-skills` and reinstall
 
 ## Skills
 
 | Skill | Description |
 |-------|-------------|
-| `devicemanager` | Device Manager 平台管理 |
+| [devicemanager](skills/devicemanager) | Manage Device Manager platform resources — device monitoring, remote diagnostics, configuration, DRC templates, device groups, remote tunnels, edge computing, firmware upgrades, and alerts |
