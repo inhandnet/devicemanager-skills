@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.1 (2026-04-29)
+
+### Improvements
+
+- **Traffic commands**: Add `devicemanager device traffic hourly` command reference; update `traffic monthly` to positional arg style (remove `--device` flag)
+- **Traffic analysis guide**: Add hourly traffic section and hour-level troubleshooting guidance
+- **SKILL.md**: Update traffic command cheatsheet and version to 0.1.1
+
+---
+
 ## v0.1.0 (2026-04-29)
 
 ### New Features
