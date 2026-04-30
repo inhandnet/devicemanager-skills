@@ -72,6 +72,11 @@ Device Manager 是映翰通（InHand Networks）的 IoT 设备管理云平台。
 devicemanager auth login [--host cn|global|<domain>]  # 登录
 devicemanager auth status                              # 认证状态
 devicemanager auth logout                              # 登出
+devicemanager auth impersonate --user <uid>            # 模拟登录（自动找内部组织）
+devicemanager auth impersonate --org <oid>             # 模拟登录（自动找组织管理员）
+devicemanager auth impersonate --stop                  # 退出模拟登录
+devicemanager auth orgs                                # 所属组织列表
+devicemanager auth switch-org <oid>                    # 切换组织
 devicemanager config current-context                   # 当前环境
 devicemanager config list-contexts                     # 列出所有环境
 devicemanager config use-context <name>                # 切换环境

@@ -8,6 +8,7 @@
 - **Alert rules**: Full CRUD for alert rules (`alert-rule list/get/create/update/delete/enable/disable`)
 - **Alert acknowledge**: Add `device alert-ack` to confirm alerts
 - **Online statistics**: Add `device online-stats` for device online rate and duration analysis
+- **Impersonate & org switching**: Add `auth impersonate`, `auth orgs`, `auth switch-org` commands
 - **Device diagnostics**: Add `device online-events` (online/offline event timeline), `device register-events` (registration history), and `edge app logs` (edge app runtime logs) for troubleshooting
 - **Task management**: Unified task view with `task list/cancel/restart`
 - **System management**: New `system` command group:
@@ -18,7 +19,7 @@
 
 ### Improvements
 
-- **Command references**: Updated from 99 to 138 auto-generated command docs
+- **Command references**: Updated from 99 to 141 auto-generated command docs
 - **SKILL.md**: Update install section to reference `INSTALL.md` from devicemanager-cli instead of `go install`, enabling fully automated CLI installation by AI assistants
 - **SKILL.md**: Added command cheatsheet sections for alert rules, tasks, system management; updated reference loading table
 
