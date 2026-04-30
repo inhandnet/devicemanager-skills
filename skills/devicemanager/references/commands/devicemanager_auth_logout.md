@@ -2,19 +2,21 @@
 
 Logout and invalidate tokens
 
-### Examples
-
 ```
-  # Logout from current context
-  devicemanager auth logout
-
-  # Logout from a specific context
-  devicemanager auth logout my-context
+devicemanager auth logout [context] [flags]
 ```
 
 ### Options
 
 ```
-  This command accepts an optional positional argument [context].
-  If not specified, the current active context is used.
+  -h, --help   help for logout
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

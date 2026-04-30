@@ -2,15 +2,17 @@
 
 Manage firmware and upgrades
 
-### Examples
-
-```
-  devicemanager firmware list
-  devicemanager firmware upload firmware.bin
-  devicemanager firmware create --fid <file-id> --name "IR615-v2.0" --version 2.0.0 --model IR615
-  devicemanager firmware upgrade <device-id> --firmware-id <id>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for firmware
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

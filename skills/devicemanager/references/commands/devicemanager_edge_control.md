@@ -2,14 +2,17 @@
 
 Remote control edge apps on devices
 
-### Examples
-
-```
-  devicemanager edge control start <device-id> <app-id>
-  devicemanager edge control stop <device-id> <app-id>
-  devicemanager edge control restart <device-id> <app-id>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for control
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

@@ -2,14 +2,17 @@
 
 Manage edge app versions
 
-### Examples
-
-```
-  devicemanager edge version list <app-id>
-  devicemanager edge version upload app.tar.gz --app <app-id>
-  devicemanager edge version deploy <app-id> <version>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for version
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

@@ -2,9 +2,16 @@
 
 Make an authenticated API request
 
+### Synopsis
+
 Make an authenticated API request to the DM platform.
+
 The path is appended to the current context's host URL.
 Authorization header is automatically injected.
+
+```
+devicemanager api <path> [flags]
+```
 
 ### Examples
 
@@ -36,12 +43,21 @@ Authorization header is automatically injected.
 ### Options
 
 ```
-  <path>                       API path (required positional argument)
-  -X, --method string          HTTP method (default: GET)
-  -q, --query stringArray      Query parameter (key=value)
-  -f, --field stringArray      Body field (key=value), sent as JSON
-  -H, --header stringArray     Additional header (Key: Value)
-      --input string           Read body from file (use - for stdin)
-      --output-file string     Save response body to file (for binary downloads)
-  -c, --column stringArray     Columns to show in table output
+  -c, --column stringArray   Columns to show in table output
+  -f, --field stringArray    Body field (key=value), sent as JSON
+  -H, --header stringArray   Additional header (Key: Value)
+  -h, --help                 help for api
+      --input string         Read body from file (use - for stdin)
+  -X, --method string        HTTP method (default: GET)
+      --output-file string   Save response body to file (for binary downloads)
+  -q, --query stringArray    Query parameter (key=value)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

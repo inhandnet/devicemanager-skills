@@ -2,17 +2,22 @@
 
 Assign devices to a DRC template
 
-### Examples
-
 ```
-  devicemanager drc devices add <template-id> <device-id-1> <device-id-2>
-  devicemanager drc devices add <template-id> <device-id> --group <group-id>
+devicemanager drc devices add <template-id> <device-id>... [flags]
 ```
 
 ### Options
 
 ```
-  <template-id>        Template ID (required positional argument)
-  <device-id>...       One or more device IDs (required positional arguments, minimum 1)
-      --group strings  Device group IDs to assign
+      --group strings   Device group IDs to assign
+  -h, --help            help for add
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

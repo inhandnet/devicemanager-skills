@@ -2,17 +2,22 @@
 
 Batch upgrade devices with a firmware
 
-### Examples
-
 ```
-  devicemanager firmware devices add <firmware-id> <device-id-1> <device-id-2>
-  devicemanager firmware devices add <firmware-id> <device-id> --group <group-id>
+devicemanager firmware devices add <firmware-id> <device-id>... [flags]
 ```
 
 ### Options
 
 ```
-  <firmware-id>        Firmware ID (required positional argument)
-  <device-id>...       One or more device IDs (required positional arguments, minimum 1)
-      --group strings  Device group IDs to upgrade
+      --group strings   Device group IDs to upgrade
+  -h, --help            help for add
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

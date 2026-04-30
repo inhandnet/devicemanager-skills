@@ -2,17 +2,24 @@
 
 Create an edge app config
 
-### Examples
-
 ```
-  devicemanager edge config create <app-id> --version 1.0.0 --content "{...}"
+devicemanager edge config create <app-id> [flags]
 ```
 
 ### Options
 
 ```
-  <app-id>                  App ID (required positional argument)
-      --version string      Config version (required)
-      --content string      Config content (required)
-      --description string  Description
+      --content string       Config content (required)
+      --description string   Description
+  -h, --help                 help for create
+      --version string       Config version (required)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.2.0 (2026-04-30)
+
+### New Features
+
+- **Device update/delete**: Add `device update` and `device delete` commands
+- **Alert rules**: Full CRUD for alert rules (`alert-rule list/get/create/update/delete/enable/disable`)
+- **Alert acknowledge**: Add `device alert-ack` to confirm alerts
+- **Online statistics**: Add `device online-stats` for device online rate and duration analysis
+- **Device diagnostics**: Add `device online-events` (online/offline event timeline), `device register-events` (registration history), and `edge app logs` (edge app runtime logs) for troubleshooting
+- **Task management**: Unified task view with `task list/cancel/restart`
+- **System management**: New `system` command group:
+  - `system user list/get/create/update/delete` — user management
+  - `system permission list/get/create/update/delete/users/devices` — device permission groups
+  - `system org get/update` — organization info
+  - `system log list` — audit log query
+
+### Improvements
+
+- **Command references**: Updated from 99 to 138 auto-generated command docs
+- **SKILL.md**: Update install section to reference `INSTALL.md` from devicemanager-cli instead of `go install`, enabling fully automated CLI installation by AI assistants
+- **SKILL.md**: Added command cheatsheet sections for alert rules, tasks, system management; updated reference loading table
+
+---
+
 ## v0.1.2 (2026-04-29)
 
 ### Improvements

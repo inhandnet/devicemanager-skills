@@ -2,16 +2,22 @@
 
 List devices deployed with an edge agent
 
-### Examples
-
 ```
-  devicemanager edge agent devices <agent-id>
-  devicemanager edge agent devices <agent-id> --status READY
+devicemanager edge agent devices <agent-id> [flags]
 ```
 
 ### Options
 
 ```
-  <agent-id>          Agent ID (required positional argument)
-      --status string  Filter by status (INSTALLING/DOWNLOADING/READY/FAILED)
+  -h, --help            help for devices
+      --status string   Filter by status (INSTALLING/DOWNLOADING/READY/FAILED)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

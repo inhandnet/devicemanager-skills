@@ -2,14 +2,17 @@
 
 Query device traffic statistics
 
-### Examples
-
-```
-  devicemanager device traffic monthly 202604 <device-id>
-  devicemanager device traffic daily 202604 <device-id>
-  devicemanager device traffic hourly <device-id>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for traffic
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

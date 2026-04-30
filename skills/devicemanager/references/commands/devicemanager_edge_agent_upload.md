@@ -2,16 +2,22 @@
 
 Upload an edge agent
 
-### Examples
-
 ```
-  devicemanager edge agent upload agent.tar.gz
-  devicemanager edge agent upload agent.tar.gz --description "Edge agent v2.0"
+devicemanager edge agent upload <file-path> [flags]
 ```
 
 ### Options
 
 ```
-  <file-path>            Path to the agent file (required positional argument)
-      --description string  Agent description
+      --description string   Agent description
+  -h, --help                 help for upload
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

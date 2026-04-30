@@ -2,18 +2,25 @@
 
 Update a tunnel
 
-### Examples
-
 ```
-  devicemanager tunnel update <tunnel-id> --name new-name --local-port 8080
+devicemanager tunnel update <tunnel-id> [flags]
 ```
 
 ### Options
 
 ```
-  <tunnel-id>                 Tunnel ID (required positional argument)
-      --name string           Tunnel name
-      --proto string          Protocol (http/https/tcp)
-      --local-address string  Local address
-      --local-port int        Local port
+  -h, --help                   help for update
+      --local-address string   Local address
+      --local-port int         Local port
+      --name string            Tunnel name
+      --proto string           Protocol (http/https/tcp)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

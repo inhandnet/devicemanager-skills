@@ -2,18 +2,23 @@
 
 Deploy an edge app config to devices
 
-### Examples
-
 ```
-  devicemanager edge config deploy <app-id> <version> --device <device-id>
-  devicemanager edge config deploy <app-id> <version> --group <group-id>
+devicemanager edge config deploy <app-id> <version> [flags]
 ```
 
 ### Options
 
 ```
-  <app-id>             App ID (required positional argument)
-  <version>            Config version (required positional argument)
-      --device strings  Device IDs to deploy
-      --group strings   Device group IDs to deploy
+      --device strings   Device IDs to deploy
+      --group strings    Device group IDs to deploy
+  -h, --help             help for deploy
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

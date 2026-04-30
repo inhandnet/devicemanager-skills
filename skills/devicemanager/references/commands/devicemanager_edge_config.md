@@ -2,14 +2,17 @@
 
 Manage edge app configs
 
-### Examples
-
-```
-  devicemanager edge config list <app-id>
-  devicemanager edge config get <app-id> <config-id>
-  devicemanager edge config create <app-id> --version 1.0 --content "..."
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for config
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

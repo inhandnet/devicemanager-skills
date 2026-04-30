@@ -2,14 +2,21 @@
 
 Get DRC template details
 
-### Examples
-
 ```
-  devicemanager drc get <template-id>
+devicemanager drc get <template-id> [flags]
 ```
 
 ### Options
 
 ```
-  <template-id>  Template ID (required positional argument)
+  -h, --help   help for get
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

@@ -2,15 +2,21 @@
 
 Stop an edge app on a device
 
-### Examples
-
 ```
-  devicemanager edge control stop <device-id> <app-id>
+devicemanager edge control stop <device-id> <app-id> [flags]
 ```
 
 ### Options
 
 ```
-  <device-id>  Device ID (required positional argument)
-  <app-id>     App ID (required positional argument)
+  -h, --help   help for stop
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

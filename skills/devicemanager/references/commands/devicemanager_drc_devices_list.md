@@ -2,21 +2,27 @@
 
 List devices assigned to a DRC template
 
-### Examples
-
 ```
-  devicemanager drc devices list <template-id>
-  devicemanager drc devices list <template-id> --status running
+devicemanager drc devices list <template-id> [flags]
 ```
 
 ### Options
 
 ```
-  <template-id>               Template ID (required positional argument)
-      --name string           Filter by device name
-      --serial-number string  Filter by serial number
-      --status string         Filter by status (pending/running/failed/completed)
-      --cursor int            Skip N items (pagination offset) (default 0)
-      --limit int             Number of items per page (default 20)
-      --verbose int           Detail level (1-100, higher = more fields) (default 10)
+      --cursor int             Skip N items (pagination offset)
+  -h, --help                   help for list
+      --limit int              Number of items per page (default 20)
+      --name string            Filter by device name
+      --serial-number string   Filter by serial number
+      --status string          Filter by status (pending/running/failed/completed)
+      --verbose int            Detail level (1-100, higher = more fields) (default 10)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

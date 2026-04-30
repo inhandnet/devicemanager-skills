@@ -2,17 +2,22 @@
 
 List edge agents
 
-### Examples
-
 ```
-  devicemanager edge agent list
-  devicemanager edge agent list --version 1.0.0
+devicemanager edge agent list [flags]
 ```
 
 ### Options
 
 ```
-      --version string  Filter by version
+  -h, --help             help for list
+      --version string   Filter by version
 ```
 
-Aliases: `ls`
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

@@ -2,14 +2,21 @@
 
 Batch query clients for multiple devices
 
-### Examples
-
 ```
-  devicemanager device clients batch <device-id-1> <device-id-2> <device-id-3>
+devicemanager device clients batch <device-id>... [flags]
 ```
 
 ### Options
 
 ```
-  <device-id>...  One or more device IDs (required positional arguments, minimum 1)
+  -h, --help   help for batch
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

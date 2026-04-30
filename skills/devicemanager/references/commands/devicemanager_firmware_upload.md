@@ -2,14 +2,21 @@
 
 Upload a firmware file
 
-### Examples
-
 ```
-  devicemanager firmware upload firmware.bin
+devicemanager firmware upload <file-path> [flags]
 ```
 
 ### Options
 
 ```
-  <file-path>  Path to the firmware file (required positional argument)
+  -h, --help   help for upload
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

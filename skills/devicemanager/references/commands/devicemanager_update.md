@@ -2,9 +2,16 @@
 
 Update devicemanager CLI to the latest version
 
+### Synopsis
+
 Check for and install newer versions of the devicemanager CLI.
+
 By default, downloads and installs the latest release.
 Use --check to only check without installing.
+
+```
+devicemanager update [flags]
+```
 
 ### Examples
 
@@ -29,7 +36,16 @@ Use --check to only check without installing.
 
 ```
       --check            Only check for updates, don't install
+  -h, --help             help for update
+  -o, --output string    Output format for --check (json)
       --version string   Update to a specific version (e.g. v0.3.0)
   -y, --yes              Skip confirmation prompt
-  -o, --output string    Output format for --check (json)
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
 ```

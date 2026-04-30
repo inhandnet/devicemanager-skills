@@ -2,16 +2,17 @@
 
 Manage device groups
 
-### Examples
-
-```
-  devicemanager devicegroup list
-  devicemanager devicegroup get <group-id>
-  devicemanager devicegroup create --name "Factory A"
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for devicegroup
+```
 
-Aliases: `dg`
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

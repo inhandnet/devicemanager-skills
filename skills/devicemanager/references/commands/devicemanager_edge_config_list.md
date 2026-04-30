@@ -2,18 +2,22 @@
 
 List configs of an edge app
 
-### Examples
-
 ```
-  devicemanager edge config list <app-id>
-  devicemanager edge config list <app-id> --version 1.0.0
+devicemanager edge config list <app-id> [flags]
 ```
 
 ### Options
 
 ```
-  <app-id>             App ID (required positional argument)
-      --version string  Filter by version
+  -h, --help             help for list
+      --version string   Filter by version
 ```
 
-Aliases: `ls`
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

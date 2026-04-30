@@ -2,15 +2,21 @@
 
 Add devices to a group
 
-### Examples
-
 ```
-  devicemanager devicegroup devices add <group-id> <device-id-1> <device-id-2>
+devicemanager devicegroup devices add <group-id> <device-id>... [flags]
 ```
 
 ### Options
 
 ```
-  <group-id>      Group ID (required positional argument)
-  <device-id>...  One or more device IDs (required positional arguments, minimum 1)
+  -h, --help   help for add
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

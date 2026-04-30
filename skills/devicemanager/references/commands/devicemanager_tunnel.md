@@ -2,14 +2,17 @@
 
 Manage remote tunnels
 
-### Examples
-
-```
-  devicemanager tunnel list
-  devicemanager tunnel create --name ssh-tunnel --device-id <id> --local-port 22
-  devicemanager tunnel connect <tunnel-id>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for tunnel
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

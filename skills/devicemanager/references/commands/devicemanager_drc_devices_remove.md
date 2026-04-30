@@ -2,16 +2,22 @@
 
 Remove a device from a DRC template
 
-### Examples
-
 ```
-  devicemanager drc devices remove <template-id> <device-id>
+devicemanager drc devices remove <template-id> <device-id> [flags]
 ```
 
 ### Options
 
 ```
-  <template-id>  Template ID (required positional argument)
-  <device-id>    Device ID (required positional argument)
-  -y, --yes      Skip confirmation prompt
+  -h, --help   help for remove
+  -y, --yes    Skip confirmation prompt
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

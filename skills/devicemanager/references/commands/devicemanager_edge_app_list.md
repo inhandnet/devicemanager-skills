@@ -2,17 +2,22 @@
 
 List edge apps
 
-### Examples
-
 ```
-  devicemanager edge app list
-  devicemanager edge app list --name "my-app"
+devicemanager edge app list [flags]
 ```
 
 ### Options
 
 ```
-      --name string  Filter by app name
+  -h, --help          help for list
+      --name string   Filter by app name
 ```
 
-Aliases: `ls`
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

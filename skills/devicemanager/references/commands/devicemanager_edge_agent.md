@@ -2,14 +2,17 @@
 
 Manage edge agents (engines)
 
-### Examples
-
-```
-  devicemanager edge agent list
-  devicemanager edge agent get <agent-id>
-  devicemanager edge agent upload agent.tar.gz
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for agent
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```

@@ -2,17 +2,21 @@
 
 List all contexts
 
-### Examples
-
 ```
-  devicemanager config list-contexts
-  devicemanager config ls
+devicemanager config list-contexts [flags]
 ```
 
 ### Options
 
 ```
-  Aliases: ls
-  This command has no specific options.
-  Displays a table with CURRENT, NAME, API, and USER columns.
+  -h, --help   help for list-contexts
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

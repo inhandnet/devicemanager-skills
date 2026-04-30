@@ -2,14 +2,21 @@
 
 Connect a tunnel
 
-### Examples
-
 ```
-  devicemanager tunnel connect <tunnel-id>
+devicemanager tunnel connect <tunnel-id> [flags]
 ```
 
 ### Options
 
 ```
-  <tunnel-id>  Tunnel ID (required positional argument)
+  -h, --help   help for connect
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

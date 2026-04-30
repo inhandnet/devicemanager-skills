@@ -2,15 +2,22 @@
 
 Upload an edge app version
 
-### Examples
-
 ```
-  devicemanager edge version upload app.tar.gz --app <app-id>
+devicemanager edge version upload <file-path> [flags]
 ```
 
 ### Options
 
 ```
-  <file-path>       Path to the version file (required positional argument)
-      --app string  Edge app ID (required)
+      --app string   Edge app ID (required)
+  -h, --help         help for upload
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
 ```

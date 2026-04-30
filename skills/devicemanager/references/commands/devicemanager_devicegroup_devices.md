@@ -2,15 +2,17 @@
 
 Manage devices in a group
 
-### Examples
-
-```
-  devicemanager devicegroup devices list <group-id>
-  devicemanager devicegroup devices add <group-id> <device-id>
-  devicemanager devicegroup devices remove <group-id> <device-id>
-  devicemanager devicegroup devices available <group-id>
-```
-
 ### Options
 
-This command has no specific options. See subcommands.
+```
+  -h, --help   help for devices
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+```
