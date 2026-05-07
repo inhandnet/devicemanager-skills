@@ -9,10 +9,13 @@ devicemanager system org update <org-id> [flags]
 ### Options
 
 ```
-      --address string   Organization address
-      --contact string   Contact information
-  -h, --help             help for update
-      --name string      Organization name
+      --address string        Organization address
+      --biz-category string   Business category
+      --contact string        Contact information
+      --country string        Country
+      --email string          Organization email
+  -h, --help                  help for update
+      --name string           Organization name
 ```
 
 ### Options inherited from parent commands

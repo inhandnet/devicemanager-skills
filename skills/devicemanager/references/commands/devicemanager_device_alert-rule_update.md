@@ -9,9 +9,15 @@ devicemanager device alert-rule update <rule-id> [flags]
 ### Options
 
 ```
-  -h, --help               help for update
-      --name string        New rule name
-      --threshold string   New threshold value
+      --for-device-type string     Target scope: ALL, DEVICE_GROUP, or DEVICE
+      --for-device-value strings   Target device/group IDs (comma-separated)
+  -h, --help                       help for update
+      --name string                New rule name
+      --notify-delay int           Delay in minutes before alerting
+      --notify-types strings       Notification types: email, sms, webhook (comma-separated)
+      --notify-users strings       User IDs to notify (comma-separated)
+      --webhook-secret string      Webhook secret
+      --webhook-url string         Webhook URL
 ```
 
 ### Options inherited from parent commands

@@ -1,4 +1,4 @@
-Agent skills for managing InHand Networks [Device Manager](https://iot.inhand.com.cn) platform via the `devicemanager` CLI.
+Agent skills for managing InHand Networks [Device Manager](https://iot.inhand.com) platform via the `devicemanager` CLI.
 
 These skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code and Codex CLI.
 
@@ -6,18 +6,23 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 
 Once installed, talk to your AI agent in natural language to manage your Device Manager platform — no need to memorize CLI commands.
 
-- **Device monitoring** — check device status, find offline devices, view signal quality, connected clients, traffic statistics
-- **Remote diagnostics** — signal analysis (RSSI/SINR/RSRP), remote reboot, force disconnect
-- **Configuration** — read/push device config, DRC templates for batch config deployment
+- **Device monitoring** — check status, find offline devices, signal quality, online statistics, traffic statistics
+- **Remote diagnostics** — signal analysis, online/offline events, registration history, remote reboot
+- **Device management** — update properties, delete devices
+- **Configuration** — read/push device config, DRC templates for batch deployment
 - **Device groups** — create and manage groups, batch add/remove devices
-- **Remote tunnels** — create tunnels, connect/disconnect, port forwarding to device services
-- **Edge computing** — manage edge engines, applications, versions, configs, remote start/stop/restart
-- **Firmware upgrades** — check available firmware, single/batch OTA upgrades, track progress
-- **Alerts** — view device alerts, filter by state
+- **Remote tunnels** — create tunnels, connect/disconnect, port forwarding
+- **Edge computing** — manage engines, apps, versions, configs, view logs
+- **Firmware upgrades** — single/batch OTA upgrades, track progress
+- **Alerts** — view alerts, acknowledge, alert rule management
+- **Tasks** — list, cancel, restart platform tasks
+- **System management** — users, device permissions, organization, audit logs
+- **Identity & orgs** — impersonate users, switch organizations
+- **Device docs** — search and browse device model reference documentation
 
 ## Prerequisites
 
-- A [Device Manager](https://iot.inhand.com.cn) account
+- A [Device Manager](https://iot.inhand.com) account
 
 > [!NOTE]
 > The [`devicemanager` CLI](https://github.com/inhandnet/devicemanager-cli) is required but you don't need to install it beforehand — the skill will guide Claude through the CLI installation and login automatically on first use. You can also [install it manually](https://github.com/inhandnet/devicemanager-cli) if you prefer.
@@ -103,11 +108,12 @@ claude --plugin-dir /path/to/devicemanager-skills
 
 The skill supports both English and Chinese. In most cases, just describe what you need — Claude automatically activates the skill when it detects requests related to:
 
-- Device management (list, status, offline troubleshooting)
-- Signal analysis, remote reboot, force disconnect
+- Device management (list, status, offline troubleshooting, online statistics)
+- Signal analysis, remote diagnostics, remote reboot
 - Configuration, DRC templates, firmware upgrades
-- Device groups, remote tunnels
-- Edge computing (engines, apps, versions, deployment)
+- Device groups, remote tunnels, edge computing
+- Alerts, alert rules, tasks, system management
+- Identity switching, device model documentation
 
 ```
 You:    Show me all offline devices
@@ -160,4 +166,4 @@ Your CLI session has expired. Run `devicemanager auth login` to re-authenticate.
 
 | Skill | Description |
 |-------|-------------|
-| [devicemanager](skills/devicemanager) | Manage Device Manager platform resources — device monitoring, remote diagnostics, configuration, DRC templates, device groups, remote tunnels, edge computing, firmware upgrades, and alerts |
+| [devicemanager](skills/devicemanager) | Manage Device Manager platform resources — device monitoring, diagnostics, configuration, groups, tunnels, edge computing, firmware upgrades, alerts, tasks, system management, and device docs |

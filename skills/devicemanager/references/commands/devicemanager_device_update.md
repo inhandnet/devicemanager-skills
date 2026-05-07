@@ -19,9 +19,10 @@ devicemanager device update <device-id> [flags]
 ### Options
 
 ```
-      --description string   New device description
-  -h, --help                 help for update
-      --name string          New device name
+      --description string     New device description
+  -h, --help                   help for update
+      --mobile-number string   Device mobile number
+      --name string            New device name
 ```
 
 ### Options inherited from parent commands

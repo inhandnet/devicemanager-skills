@@ -2,6 +2,10 @@
 
 Create a user
 
+### Synopsis
+
+Create a user and send an invitation email. The user sets their password via the email link.
+
 ```
 devicemanager system user create [flags]
 ```
@@ -9,18 +13,26 @@ devicemanager system user create [flags]
 ### Examples
 
 ```
-  devicemanager system user create --name "test" --email "test@example.com" \
-    --password "123456" --role "device_monitor"
+  # Create an internal user (invitation email sent automatically)
+  devicemanager system user create --name "test" --email "test@example.com"
+
+  # Create with a specific role ID
+  devicemanager system user create --name "test" --email "test@example.com" --role-id <role-id>
+
+  # Create an external user
+  devicemanager system user create --email "ext@example.com" --external
 ```
 
 ### Options
 
 ```
-      --email string      User email (required)
-  -h, --help              help for create
-      --name string       User name (required)
-      --password string   User password (required)
-      --role string       Role name
+      --email string     User email (required)
+      --external         Create as external user
+  -h, --help             help for create
+      --lang string      Invitation email language: "en" (default) or "zh"
+      --name string      User name
+      --role string      Role name
+      --role-id string   Role ID
 ```
 
 ### Options inherited from parent commands

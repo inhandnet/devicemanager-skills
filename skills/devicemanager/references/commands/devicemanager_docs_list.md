@@ -1,18 +1,26 @@
-## devicemanager system user update
+## devicemanager docs list
 
-Update a user
+List available models or model-specific documents
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager docs list [flags]
+```
+
+### Examples
+
+```
+  # List all available models
+  devicemanager docs list
+
+  # List documents for a specific model
+  devicemanager docs list --model ER805
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role string      New role name
-      --role-id string   New role ID
+  -h, --help           help for list
+      --model string   Show index for a specific model (e.g. ER805, IR615)
 ```
 
 ### Options inherited from parent commands

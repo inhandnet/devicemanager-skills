@@ -24,7 +24,7 @@ devicemanager auth login [flags]
 ```
       --context string     Context name to create/update (default "default")
   -h, --help               help for login
-      --host string        Platform region: "cn", "global", or a custom domain (default "cn")
+      --host string        Platform region: "global", "cn", or a custom domain (default "global")
       --port int           Local callback server port (default 18920)
       --timeout duration   Timeout waiting for browser login (default 3m0s)
 ```

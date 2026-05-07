@@ -1,5 +1,47 @@
 # Changelog
 
+## v0.3.0 (2026-05-07)
+
+### Breaking Changes
+
+- **Alert rule fields**: Create/update commands now use `--alert-type`/`--for-device-type`/`--notify-users`/`--notify-types`/`--webhook-url` instead of old `--metric`/`--condition`/`--threshold`
+- **User create**: No longer requires `--password`; uses invitation email flow. Added `--role-id`, `--external`, `--lang`
+- **Default region**: `--host` default changed from `cn` to `global`
+
+### Improvements
+
+- **SKILL.md**: Update alert-rule, user, permission, org, device cheatsheet to match new CLI flags
+- **Command references**: Regenerated to reflect all v0.3.0 changes
+
+---
+
+## v0.2.2 (2026-05-06)
+
+### New Features
+
+- **Device documentation**: Add `docs list/get/search` command references for browsing [model-reference](https://github.com/inhandnet/model-reference) repo
+- **SKILL.md**: Add device docs cheatsheet section and rule 13 (query device model → search docs → read before answering)
+- **SKILL.md**: Add reference loading entries for device config and troubleshooting scenarios
+
+### Improvements
+
+- **Command references**: Updated to 145 auto-generated command docs
+
+---
+
+## v0.2.1 (2026-05-06)
+
+### New Features
+
+- **Impersonate & org switching**: Add `auth impersonate`, `auth orgs`, `auth switch-org` command references
+
+### Improvements
+
+- **Command references**: Updated to 141 auto-generated command docs
+- **SKILL.md**: Add impersonate, orgs, switch-org to auth cheatsheet
+
+---
+
 ## v0.2.0 (2026-04-30)
 
 ### New Features

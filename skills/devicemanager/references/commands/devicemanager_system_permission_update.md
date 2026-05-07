@@ -9,8 +9,9 @@ devicemanager system permission update <group-id> [flags]
 ### Options
 
 ```
-  -h, --help          help for update
-      --name string   New group name
+      --description string   New group description
+  -h, --help                 help for update
+      --name string          New group name
 ```
 
 ### Options inherited from parent commands

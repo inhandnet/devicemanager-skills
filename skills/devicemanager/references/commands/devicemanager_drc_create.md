@@ -18,6 +18,7 @@ devicemanager drc create [flags]
       --content string        Template content (required)
       --content-type string   Content type
       --desc string           Description
+      --group-ids strings     Permission group IDs (comma-separated)
   -h, --help                  help for create
       --model string          Device model (required)
       --name string           Template name (required)
