@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.4.0 (2026-05-07)
+
+### New Features
+
+- **Device**: Add `models`, `stats`, `count online/total`, `traffic top`, `config export` command references and cheatsheet
+- **Firmware**: Add `get`, `job-stats` command references and cheatsheet
+- **System**: Add `role list`, `org list`, `permission devicegroups`, `permission unassigned-users` command references and cheatsheet
+- **Command references**: Updated to 159 auto-generated command docs
+
+---
+
 ## v0.3.0 (2026-05-07)
 
 ### Breaking Changes
@@ -12,7 +23,7 @@
 ### Improvements
 
 - **SKILL.md**: Update alert-rule, user, permission, org, device cheatsheet to match new CLI flags
-- **Command references**: Regenerated to reflect all v0.3.0 changes
+- **Command references**: Regenerated to 145 command docs
 
 ---
 

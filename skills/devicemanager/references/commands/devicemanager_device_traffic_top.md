@@ -1,17 +1,24 @@
-## devicemanager system user update
+## devicemanager device traffic top
 
-Update a user
+Show top devices by monthly traffic
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager device traffic top [flags]
+```
+
+### Examples
+
+```
+  devicemanager device traffic top --month 202604
+  devicemanager device traffic top --month 202604 --limit 10
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+  -h, --help           help for top
+      --limit string   Number of top devices to return
+      --month string   Month in YYYYMM format (e.g. 202604)
 ```
 
 ### Options inherited from parent commands

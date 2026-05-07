@@ -1,17 +1,17 @@
-## devicemanager system user update
+## devicemanager device count online
 
-Update a user
+Query online device count over time
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager device count online [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+      --after string    Start date (ISO format)
+      --before string   End date (ISO format)
+  -h, --help            help for online
 ```
 
 ### Options inherited from parent commands

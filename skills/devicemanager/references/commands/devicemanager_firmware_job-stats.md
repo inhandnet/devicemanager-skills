@@ -1,17 +1,15 @@
-## devicemanager system user update
+## devicemanager firmware job-stats
 
-Update a user
+Get firmware upgrade job statistics
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager firmware job-stats <job-id> [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+  -h, --help   help for job-stats
 ```
 
 ### Options inherited from parent commands

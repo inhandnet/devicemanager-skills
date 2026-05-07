@@ -1,17 +1,18 @@
-## devicemanager system user update
+## devicemanager system permission unassigned-users
 
-Update a user
+List users not assigned to any permission group
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager system permission unassigned-users [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+      --cursor int    Skip N items (pagination offset)
+  -h, --help          help for unassigned-users
+      --limit int     Number of items per page (default 20)
+      --verbose int   Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands

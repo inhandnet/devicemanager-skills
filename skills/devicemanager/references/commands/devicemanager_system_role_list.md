@@ -1,17 +1,15 @@
-## devicemanager system user update
+## devicemanager system role list
 
-Update a user
+List roles in the organization
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager system role list [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+  -h, --help   help for list
 ```
 
 ### Options inherited from parent commands

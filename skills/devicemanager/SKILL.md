@@ -89,6 +89,8 @@ devicemanager config delete-context <name>             # 删除环境
 devicemanager device list                              # 设备列表
 devicemanager device get <id>                          # 设备详情
 devicemanager device create --name <n> --serial-number <sn>  # 添加设备
+devicemanager device models                              # 设备型号列表
+devicemanager device stats                               # 设备总览统计
 devicemanager device update <id> --name <n> [--mobile-number <m>]  # 编辑设备
 devicemanager device delete <id>                       # 删除设备
 devicemanager device signal <id> [--after/--before]    # 信号质量历史
@@ -96,6 +98,7 @@ devicemanager device kick <id>                         # 强制断开
 devicemanager device reboot <id>                       # 远程重启
 devicemanager device config get <id>                   # 获取配置
 devicemanager device config set <id> --content <json>  # 下发配置
+devicemanager device config export <id>                # 导出配置
 devicemanager device alert                             # 告警记录
 devicemanager device alert-ack <alert-id>              # 确认告警
 devicemanager device clients list <id>                 # 连接客户端
@@ -103,6 +106,9 @@ devicemanager device clients batch                     # 批量查询客户端
 devicemanager device traffic monthly <month> <id>      # 月度流量
 devicemanager device traffic daily <month> <id>        # 每日流量
 devicemanager device traffic hourly <id>               # 小时流量
+devicemanager device traffic top --month <YYYYMM>     # 月度流量排行
+devicemanager device count online [--after/--before]  # 在线设备数量趋势
+devicemanager device count total [--after/--before]   # 设备总量趋势
 devicemanager device online-stats --device-id <id> --start-time <d> --end-time <d>  # 在线统计
 devicemanager device online-events <id> --start-time <d> --end-time <d>  # 上下线事件时间线
 devicemanager device register-events <serial-number>  # 设备注册日志
@@ -211,12 +217,14 @@ devicemanager edge control restart <device-id> <app-id>  # 重启应用
 
 ```
 devicemanager firmware list [--model <model>]          # 固件列表
+devicemanager firmware get <firmware-id>               # 固件详情
 devicemanager firmware create --fid <fid> --name <n> --version <v> --model <m>  # 创建固件记录
 devicemanager firmware upload <id> <file>              # 上传固件文件
 devicemanager firmware upgrade <device-id> --firmware-id <fid>  # 单台升级
 devicemanager firmware devices list <firmware-id>      # 批量升级设备列表
 devicemanager firmware devices add <firmware-id> [--group <gid>]  # 添加批量升级设备
 devicemanager firmware devices remove <job-id> <device-id>  # 取消设备升级
+devicemanager firmware job-stats <job-id>              # 升级任务统计
 ```
 
 ### 系统管理
@@ -229,6 +237,9 @@ devicemanager system user create --name <n> --email <e> [--role-id <rid>] [--ext
 devicemanager system user update <id> [--name <n>] [--role-id <rid>]  # 更新用户
 devicemanager system user delete <id>                  # 删除用户
 
+# 角色
+devicemanager system role list                         # 角色列表
+
 # 设备权限组
 devicemanager system permission list                   # 权限组列表
 devicemanager system permission get <id>               # 权限组详情
@@ -237,8 +248,11 @@ devicemanager system permission update <id> [--name <n>] [--description <d>]  # 
 devicemanager system permission delete <id>            # 删除权限组
 devicemanager system permission users <id>             # 组内用户
 devicemanager system permission devices <id>           # 组内设备
+devicemanager system permission devicegroups <id>      # 组内设备组
+devicemanager system permission unassigned-users       # 未分配权限组的用户
 
 # 组织
+devicemanager system org list                          # 组织列表
 devicemanager system org get                           # 当前组织信息
 devicemanager system org update <id> [--name <n>] [--email <e>] [--country <c>]  # 更新组织信息
 

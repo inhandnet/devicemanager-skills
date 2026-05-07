@@ -1,17 +1,15 @@
-## devicemanager system user update
+## devicemanager device models
 
-Update a user
+List supported device models
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager device models [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+  -h, --help   help for models
 ```
 
 ### Options inherited from parent commands

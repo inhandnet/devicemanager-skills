@@ -1,17 +1,15 @@
-## devicemanager system user update
+## devicemanager firmware get
 
-Update a user
+Get firmware details
 
 ```
-devicemanager system user update <user-id> [flags]
+devicemanager firmware get <firmware-id> [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help             help for update
-      --name string      New user name
-      --role-id string   New role ID (use 'system role list' to find IDs)
+  -h, --help   help for get
 ```
 
 ### Options inherited from parent commands
