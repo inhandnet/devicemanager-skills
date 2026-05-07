@@ -12,7 +12,7 @@ devicemanager system org update <org-id> [flags]
       --address string        Organization address
       --biz-category string   Business category
       --contact string        Contact information
-      --country string        Country
+      --country string        Country code (ISO 3166-1 alpha-2, e.g. CN, US, DE)
       --email string          Organization email
   -h, --help                  help for update
       --name string           Organization name

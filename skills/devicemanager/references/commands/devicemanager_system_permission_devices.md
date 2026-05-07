@@ -1,18 +1,11 @@
 ## devicemanager system permission devices
 
-List devices in a permission group
-
-```
-devicemanager system permission devices <group-id> [flags]
-```
+Manage devices in a permission group
 
 ### Options
 
 ```
-      --cursor int    Skip N items (pagination offset)
-  -h, --help          help for devices
-      --limit int     Number of items per page (default 20)
-      --verbose int   Detail level (1-100, higher = more fields) (default 10)
+  -h, --help   help for devices
 ```
 
 ### Options inherited from parent commands

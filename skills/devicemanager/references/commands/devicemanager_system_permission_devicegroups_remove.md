@@ -1,11 +1,15 @@
-## devicemanager system permission devicegroups
+## devicemanager system permission devicegroups remove
 
-Manage device groups in a permission group
+Remove device groups from a permission group
+
+```
+devicemanager system permission devicegroups remove <group-id> <devicegroup-id>... [flags]
+```
 
 ### Options
 
 ```
-  -h, --help   help for devicegroups
+  -h, --help   help for remove
 ```
 
 ### Options inherited from parent commands

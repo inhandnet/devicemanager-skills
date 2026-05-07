@@ -1,18 +1,11 @@
 ## devicemanager system permission users
 
-List users in a permission group
-
-```
-devicemanager system permission users <group-id> [flags]
-```
+Manage users in a permission group
 
 ### Options
 
 ```
-      --cursor int    Skip N items (pagination offset)
-  -h, --help          help for users
-      --limit int     Number of items per page (default 20)
-      --verbose int   Detail level (1-100, higher = more fields) (default 10)
+  -h, --help   help for users
 ```
 
 ### Options inherited from parent commands

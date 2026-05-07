@@ -1,11 +1,15 @@
-## devicemanager system permission devicegroups
+## devicemanager system permission devicegroups add
 
-Manage device groups in a permission group
+Add device groups to a permission group
+
+```
+devicemanager system permission devicegroups add <group-id> <devicegroup-id>... [flags]
+```
 
 ### Options
 
 ```
-  -h, --help   help for devicegroups
+  -h, --help   help for add
 ```
 
 ### Options inherited from parent commands

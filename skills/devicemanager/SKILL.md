@@ -246,15 +246,21 @@ devicemanager system permission get <id>               # 权限组详情
 devicemanager system permission create --name <n>      # 创建权限组
 devicemanager system permission update <id> [--name <n>] [--description <d>]  # 更新权限组
 devicemanager system permission delete <id>            # 删除权限组
-devicemanager system permission users <id>             # 组内用户
-devicemanager system permission devices <id>           # 组内设备
-devicemanager system permission devicegroups <id>      # 组内设备组
+devicemanager system permission users list <id>        # 组内用户
+devicemanager system permission users add <id> <uid>...      # 添加用户到组
+devicemanager system permission users remove <id> <uid>...   # 从组移除用户
+devicemanager system permission devices list <id>      # 组内设备
+devicemanager system permission devices add <id> <did>...    # 添加设备到组
+devicemanager system permission devices remove <id> <did>... # 从组移除设备
+devicemanager system permission devicegroups list <id> # 组内设备组
+devicemanager system permission devicegroups add <id> <dgid>...    # 添加设备组到组
+devicemanager system permission devicegroups remove <id> <dgid>... # 从组移除设备组
 devicemanager system permission unassigned-users       # 未分配权限组的用户
 
 # 组织
 devicemanager system org list                          # 组织列表
 devicemanager system org get                           # 当前组织信息
-devicemanager system org update <id> [--name <n>] [--email <e>] [--country <c>]  # 更新组织信息
+devicemanager system org update <id> [--name <n>] [--email <e>] [--country <code>]  # 更新组织信息（country 用 ISO 3166-1 代码如 CN/US）
 
 # 审计日志
 devicemanager system log list                          # 操作日志

@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.0 (2026-05-07)
+
+### New Features
+
+- **Permission**: Restructure `users/devices/devicegroups` as subcommand groups with `list/add/remove` for managing group members
+- **Org update**: `--country` now uses ISO 3166-1 alpha-2 code (e.g. CN, US)
+- **Command references**: Updated to 168 auto-generated command docs
+
+---
+
 ## v0.4.0 (2026-05-07)
 
 ### New Features
@@ -7,6 +17,7 @@
 - **Device**: Add `models`, `stats`, `count online/total`, `traffic top`, `config export` command references and cheatsheet
 - **Firmware**: Add `get`, `job-stats` command references and cheatsheet
 - **System**: Add `role list`, `org list`, `permission devicegroups`, `permission unassigned-users` command references and cheatsheet
+- **Command references**: Updated to 159 auto-generated command docs
 - **Command references**: Updated to 159 auto-generated command docs
 
 ---
