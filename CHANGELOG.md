@@ -6,6 +6,7 @@
 
 - **Alert rule fields**: Create/update commands now use `--alert-type`/`--for-device-type`/`--notify-users`/`--notify-types`/`--webhook-url` instead of old `--metric`/`--condition`/`--threshold`
 - **User create**: No longer requires `--password`; uses invitation email flow. Added `--role-id`, `--external`, `--lang`
+- **Auth impersonate**: `--org` is now required; `--user` is optional and must be combined with `--org`
 - **Default region**: `--host` default changed from `cn` to `global`
 
 ### Improvements

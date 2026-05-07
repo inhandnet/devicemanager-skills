@@ -9,14 +9,11 @@ devicemanager auth impersonate [flags]
 ### Examples
 
 ```
-  # Impersonate by user ID (auto-resolves internal org)
-  devicemanager auth impersonate --user 5e0956c46aa6d10001e931ea
-
   # Impersonate by org ID (auto-resolves org admin)
   devicemanager auth impersonate --org 5e0956c46aa6d10001e931e6
 
-  # Impersonate with both user and org
-  devicemanager auth impersonate --user <uid> --org <oid>
+  # Impersonate a specific user in an org
+  devicemanager auth impersonate --org <oid> --user <uid>
 
   # Stop impersonation and restore admin identity
   devicemanager auth impersonate --stop
