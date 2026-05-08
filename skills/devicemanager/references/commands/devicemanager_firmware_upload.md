@@ -2,8 +2,20 @@
 
 Upload a firmware file
 
+### Synopsis
+
+Upload a firmware binary file to the platform. Returns a file ID (fid) that
+is needed when creating a firmware record with 'firmware create --fid <fid>'.
+
 ```
 devicemanager firmware upload <file-path> [flags]
+```
+
+### Examples
+
+```
+  # Upload firmware and note the returned file ID
+  devicemanager firmware upload ./IG502-V2.0.0.rl4207.bin
 ```
 
 ### Options

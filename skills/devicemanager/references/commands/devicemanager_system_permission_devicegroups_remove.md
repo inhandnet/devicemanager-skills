@@ -6,6 +6,12 @@ Remove device groups from a permission group
 devicemanager system permission devicegroups remove <group-id> <devicegroup-id>... [flags]
 ```
 
+### Examples
+
+```
+  devicemanager system permission devicegroups remove <group-id> <devicegroup-id1>
+```
+
 ### Options
 
 ```

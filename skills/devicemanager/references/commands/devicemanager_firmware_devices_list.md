@@ -14,7 +14,7 @@ devicemanager firmware devices list <firmware-id> [flags]
       --limit int              Number of items per page (default 20)
       --name string            Filter by device name
       --serial-number string   Filter by serial number
-      --status string          Filter by status
+      --status string          Filter by status (pending, running, success, failed)
       --verbose int            Detail level (1-100, higher = more fields) (default 10)
 ```
 

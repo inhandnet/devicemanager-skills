@@ -16,12 +16,12 @@ devicemanager firmware create [flags]
 
 ```
       --desc string       Description
-      --fid string        Uploaded file ID (required)
+      --fid string        File ID returned by 'firmware upload' (required)
   -h, --help              help for create
-      --job-timeout int   Job timeout (seconds)
-      --model string      Device model (required)
-      --name string       Firmware name (required)
-      --version string    Firmware version (required)
+      --job-timeout int   Per-device upgrade timeout in seconds (0 = platform default)
+      --model string      Target device model, e.g. IR615 (required)
+      --name string       Firmware display name (required)
+      --version string    Firmware version, e.g. 2.0.0 (required)
 ```
 
 ### Options inherited from parent commands

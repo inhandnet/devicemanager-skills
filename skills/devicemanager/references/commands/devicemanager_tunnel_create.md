@@ -17,8 +17,8 @@ devicemanager tunnel create [flags]
 ```
       --device-id string       Device ID (required)
   -h, --help                   help for create
-      --local-address string   Local address (default "127.0.0.1")
-      --local-port int         Local port (required)
+      --local-address string   Device-side local address to forward (default "127.0.0.1")
+      --local-port int         Device-side local port to forward (required)
       --name string            Tunnel name (required)
       --proto string           Protocol (http/https/tcp) (default "tcp")
 ```

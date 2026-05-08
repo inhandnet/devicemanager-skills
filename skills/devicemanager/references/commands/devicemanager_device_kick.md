@@ -2,8 +2,18 @@
 
 Force disconnect a device
 
+### Synopsis
+
+Force disconnect a device from the platform. The device will attempt to reconnect automatically.
+
 ```
 devicemanager device kick <device-id> [flags]
+```
+
+### Examples
+
+```
+  devicemanager device kick 5d6349d6335c8c000178a194
 ```
 
 ### Options

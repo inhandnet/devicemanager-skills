@@ -9,9 +9,9 @@ devicemanager device count online [flags]
 ### Options
 
 ```
-      --after string    Start date (ISO format)
-      --before string   End date (ISO format)
-  -h, --help            help for online
+      --end-time string     End time as unix timestamp (e.g. 1717084800)
+  -h, --help                help for online
+      --start-time string   Start time as unix timestamp (e.g. 1714492800)
 ```
 
 ### Options inherited from parent commands

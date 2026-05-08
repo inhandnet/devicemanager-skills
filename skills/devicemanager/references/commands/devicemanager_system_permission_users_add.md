@@ -6,6 +6,12 @@ Add users to a permission group
 devicemanager system permission users add <group-id> <user-id>... [flags]
 ```
 
+### Examples
+
+```
+  devicemanager system permission users add <group-id> <user-id1> <user-id2>
+```
+
 ### Options
 
 ```

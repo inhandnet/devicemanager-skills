@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.1 (2026-05-08)
+
+### Bug Fixes
+
+- **System log**: Update cheatsheet to note default 7-day range
+- **Signal**: Update cheatsheet to note `--before` defaults to now
+- **Command references**: Regenerated to reflect devicegroup/tunnel list flag fixes and improved help text
+
+---
+
 ## v0.5.0 (2026-05-07)
 
 ### New Features

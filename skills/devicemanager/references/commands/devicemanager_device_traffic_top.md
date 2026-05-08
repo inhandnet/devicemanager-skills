@@ -9,16 +9,16 @@ devicemanager device traffic top [flags]
 ### Examples
 
 ```
-  devicemanager device traffic top --month 202604
-  devicemanager device traffic top --month 202604 --limit 10
+  devicemanager device traffic top --date 202604
+  devicemanager device traffic top --date 202604 --limit 10
 ```
 
 ### Options
 
 ```
+      --date string    Month in YYYYMM format (e.g. 202604)
   -h, --help           help for top
       --limit string   Number of top devices to return
-      --month string   Month in YYYYMM format (e.g. 202604)
 ```
 
 ### Options inherited from parent commands

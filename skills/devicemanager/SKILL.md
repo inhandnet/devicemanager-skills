@@ -93,7 +93,7 @@ devicemanager device models                              # 设备型号列表
 devicemanager device stats                               # 设备总览统计
 devicemanager device update <id> --name <n> [--mobile-number <m>]  # 编辑设备
 devicemanager device delete <id>                       # 删除设备
-devicemanager device signal <id> [--after/--before]    # 信号质量历史
+devicemanager device signal <id> --after <ISO> [--before <ISO>]  # 信号质量历史（before 默认当前时间）
 devicemanager device kick <id>                         # 强制断开
 devicemanager device reboot <id>                       # 远程重启
 devicemanager device config get <id>                   # 获取配置
@@ -106,9 +106,9 @@ devicemanager device clients batch                     # 批量查询客户端
 devicemanager device traffic monthly <month> <id>      # 月度流量
 devicemanager device traffic daily <month> <id>        # 每日流量
 devicemanager device traffic hourly <id>               # 小时流量
-devicemanager device traffic top --month <YYYYMM>     # 月度流量排行
-devicemanager device count online [--after/--before]  # 在线设备数量趋势
-devicemanager device count total [--after/--before]   # 设备总量趋势
+devicemanager device traffic top --date <YYYYMM>      # 月度流量排行
+devicemanager device count online --start-time <ts> --end-time <ts>  # 在线设备数量趋势
+devicemanager device count total --start-time <ts> --end-time <ts>   # 设备总量趋势
 devicemanager device online-stats --device-id <id> --start-time <d> --end-time <d>  # 在线统计
 devicemanager device online-events <id> --start-time <d> --end-time <d>  # 上下线事件时间线
 devicemanager device register-events <serial-number>  # 设备注册日志
@@ -263,7 +263,7 @@ devicemanager system org get                           # 当前组织信息
 devicemanager system org update <id> [--name <n>] [--email <e>] [--country <code>]  # 更新组织信息（country 用 ISO 3166-1 代码如 CN/US）
 
 # 审计日志
-devicemanager system log list                          # 操作日志
+devicemanager system log list                          # 操作日志（默认近 7 天）
 devicemanager system log list --start-time <d> --end-time <d>  # 按日期过滤
 ```
 

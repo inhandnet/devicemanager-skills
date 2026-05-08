@@ -6,6 +6,12 @@ Remove users from a permission group
 devicemanager system permission users remove <group-id> <user-id>... [flags]
 ```
 
+### Examples
+
+```
+  devicemanager system permission users remove <group-id> <user-id1> <user-id2>
+```
+
 ### Options
 
 ```

@@ -9,9 +9,9 @@ devicemanager device count total [flags]
 ### Options
 
 ```
-      --after string    Start date (ISO format)
-      --before string   End date (ISO format)
-  -h, --help            help for total
+      --end-time string     End time as unix timestamp (e.g. 1717084800)
+  -h, --help                help for total
+      --start-time string   Start time as unix timestamp (e.g. 1714492800)
 ```
 
 ### Options inherited from parent commands

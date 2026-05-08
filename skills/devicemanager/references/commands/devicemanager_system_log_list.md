@@ -9,7 +9,7 @@ devicemanager system log list [flags]
 ### Examples
 
 ```
-  # List recent audit logs
+  # List audit logs (defaults to last 7 days)
   devicemanager system log list
 
   # Filter by date range
@@ -25,7 +25,7 @@ devicemanager system log list [flags]
       --cursor int          Skip N items (pagination offset)
       --end-time string     End date (YYYY-MM-DD)
   -h, --help                help for list
-      --level string        Filter by level
+      --level string        Filter by level (info, warning, error)
       --limit int           Number of items per page (default 20)
       --start-time string   Start date (YYYY-MM-DD)
       --verbose int         Detail level (1-100, higher = more fields) (default 10)

@@ -2,8 +2,19 @@
 
 Delete a device
 
+### Synopsis
+
+Permanently remove a device from the platform. This action cannot be undone.
+
 ```
 devicemanager device delete <device-id> [flags]
+```
+
+### Examples
+
+```
+  devicemanager device delete 5d6349d6335c8c000178a194
+  devicemanager device delete 5d6349d6335c8c000178a194 -y  # Skip confirmation
 ```
 
 ### Options

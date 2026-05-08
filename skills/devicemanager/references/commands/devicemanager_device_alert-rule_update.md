@@ -9,6 +9,8 @@ devicemanager device alert-rule update <rule-id> [flags]
 ### Options
 
 ```
+      --alert-time-end string      Alert time range end (HH:MM, e.g. 18:00)
+      --alert-time-start string    Alert time range start (HH:MM, e.g. 08:00)
       --for-device-type string     Target scope: ALL, DEVICE_GROUP, or DEVICE
       --for-device-value strings   Target device/group IDs (comma-separated)
   -h, --help                       help for update

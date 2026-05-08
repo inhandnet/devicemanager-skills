@@ -6,6 +6,12 @@ Add devices to a permission group
 devicemanager system permission devices add <group-id> <device-id>... [flags]
 ```
 
+### Examples
+
+```
+  devicemanager system permission devices add <group-id> <device-id1> <device-id2>
+```
+
 ### Options
 
 ```

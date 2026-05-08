@@ -9,8 +9,8 @@ devicemanager edge config deploy <app-id> <version> [flags]
 ### Options
 
 ```
-      --device strings   Device IDs to deploy
-      --group strings    Device group IDs to deploy
+      --device strings   Device IDs to deploy (comma-separated or repeated)
+      --group strings    Device group IDs to deploy (comma-separated or repeated)
   -h, --help             help for deploy
 ```
 

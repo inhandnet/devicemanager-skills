@@ -9,15 +9,18 @@ devicemanager device signal <device-id> [flags]
 ### Examples
 
 ```
-  devicemanager device signal 5e6f222afbcf3e0001e133f4 \
-    --after 2024-01-01T00:00:00Z --before 2024-01-02T00:00:00Z
+  # Query signal from a start time to now
+  devicemanager device signal <device-id> --after 2026-05-01T00:00:00Z
+
+  # Query signal for a specific time range
+  devicemanager device signal <device-id> --after 2026-05-01T00:00:00Z --before 2026-05-02T00:00:00Z
 ```
 
 ### Options
 
 ```
-      --after string    Start time (ISO 8601, e.g. 2024-01-01T00:00:00Z) (required)
-      --before string   End time (ISO 8601, e.g. 2024-01-02T00:00:00Z) (required)
+      --after string    Start time (ISO 8601, e.g. 2026-05-01T00:00:00Z) (required)
+      --before string   End time (ISO 8601, defaults to now)
   -h, --help            help for signal
 ```
 

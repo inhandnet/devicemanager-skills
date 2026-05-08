@@ -9,12 +9,10 @@ devicemanager tunnel list [flags]
 ### Options
 
 ```
-      --cursor int         Skip N items (pagination offset)
       --device-id string   Filter by device ID
   -h, --help               help for list
-      --limit int          Number of items per page (default 20)
       --name string        Filter by tunnel name
-      --verbose int        Detail level (1-100, higher = more fields) (default 10)
+      --verbose int        Detail level (1-100) (default 100)
 ```
 
 ### Options inherited from parent commands
