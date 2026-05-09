@@ -22,13 +22,13 @@ devicemanager task list [flags]
 ### Options
 
 ```
-      --cursor int           Skip N items (pagination offset)
-      --device-name string   Filter by device name
-  -h, --help                 help for list
-      --limit int            Number of items per page (default 20)
-      --status string        Filter by status (running/waiting/failed/completed)
-      --type string          Filter by task type
-      --verbose int          Detail level (1-100, higher = more fields) (default 10)
+      --cursor int         Skip N items (pagination offset)
+  -h, --help               help for list
+      --limit int          Number of items per page (default 20)
+      --object-id string   Filter by device ID
+      --status string      Filter by status (running/waiting/failed/completed)
+      --type string        Filter by task type
+      --verbose int        Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands

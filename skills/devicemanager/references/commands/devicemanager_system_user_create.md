@@ -31,7 +31,7 @@ devicemanager system user create [flags]
   -h, --help             help for create
       --lang string      Invitation email language: "en" (default) or "zh"
       --name string      User name
-      --role-id string   Role ID (use 'system role list' to find IDs)
+      --role-id string   Role ID (required, use 'system role list' to find IDs)
 ```
 
 ### Options inherited from parent commands

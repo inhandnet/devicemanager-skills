@@ -1,12 +1,21 @@
 # Changelog
 
+## v0.5.2 (2026-05-08)
+
+### Bug Fixes
+
+- **Task list**: Update cheatsheet with correct parameter names (`states`/`types`/`--object-id`)
+- **Command references**: Regenerated 168 docs to reflect all v0.5.2 API path, parameter, and help text fixes
+
+---
+
 ## v0.5.1 (2026-05-08)
 
 ### Bug Fixes
 
 - **System log**: Update cheatsheet to note default 7-day range
 - **Signal**: Update cheatsheet to note `--before` defaults to now
-- **Command references**: Regenerated to reflect devicegroup/tunnel list flag fixes and improved help text
+- **Command references**: Regenerated to reflect devicegroup/tunnel list flag fixes
 
 ---
 

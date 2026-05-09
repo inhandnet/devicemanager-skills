@@ -130,7 +130,9 @@ devicemanager device alert-rule delete <id>            # 删除规则
 
 ```
 devicemanager task list                                # 任务列表
-devicemanager task list --status running               # 按状态过滤
+devicemanager task list --status running               # 按状态过滤（参数名 states）
+devicemanager task list --type firmware_upgrade        # 按类型过滤（参数名 types）
+devicemanager task list --object-id <device-id>        # 按设备 ID 过滤
 devicemanager task cancel <id>                         # 取消任务
 devicemanager task restart <id>                        # 重启任务
 ```
