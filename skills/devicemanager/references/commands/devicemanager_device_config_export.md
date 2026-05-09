@@ -1,15 +1,26 @@
 ## devicemanager device config export
 
-Export device configuration
+Export device configuration to a file
 
 ```
 devicemanager device config export <device-id> [flags]
 ```
 
+### Examples
+
+```
+  # Export to current directory (filename from server)
+  devicemanager device config export <device-id>
+
+  # Export to a specific path
+  devicemanager device config export <device-id> --file ./my-config.dat
+```
+
 ### Options
 
 ```
-  -h, --help   help for export
+  -f, --file string   Output file path (default: server filename in current directory)
+  -h, --help          help for export
 ```
 
 ### Options inherited from parent commands

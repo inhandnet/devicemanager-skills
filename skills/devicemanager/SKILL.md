@@ -98,7 +98,7 @@ devicemanager device kick <id>                         # 强制断开
 devicemanager device reboot <id>                       # 远程重启
 devicemanager device config get <id>                   # 获取配置（自动刷新，--skip-refresh 跳过）
 devicemanager device config set <id> --content <json>  # 下发配置
-devicemanager device config export <id>                # 导出配置
+devicemanager device config export <id> [--file <path>] # 导出配置（默认当前目录）
 devicemanager device alert                             # 告警记录
 devicemanager device alert-ack <alert-id>              # 确认告警
 devicemanager device clients list <id>                 # 连接客户端
@@ -107,9 +107,10 @@ devicemanager device traffic monthly <month> <id>      # 月度流量
 devicemanager device traffic daily <month> <id>        # 每日流量
 devicemanager device traffic hourly <id>               # 小时流量（默认近 2 天）
 devicemanager device traffic top [--date <YYYY-MM>]   # 月度流量排行（默认当月）
+devicemanager device traffic stats --after <d> --before <d> [--name/--model/--online]  # 流量统计（按设备，带分页）
 devicemanager device count online --start-time <ts> --end-time <ts>  # 在线设备数量趋势
 devicemanager device count total --start-time <ts> --end-time <ts>   # 设备总量趋势
-devicemanager device online-stats --device-id <id> --start-time <d> --end-time <d>  # 在线统计
+devicemanager device online-stats --start-time <d> --end-time <d> [--name/--model/--online]  # 在线统计（按设备，带分页）
 devicemanager device online-events <id> --start-time <d> --end-time <d>  # 上下线事件时间线
 devicemanager device register-events <serial-number>  # 设备注册日志
 ```

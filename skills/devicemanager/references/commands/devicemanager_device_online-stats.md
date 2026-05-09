@@ -2,6 +2,12 @@
 
 Query device online statistics
 
+### Synopsis
+
+Query online statistics for devices. Fetches the device list first, then
+queries online stats for those devices and merges the results.
+Supports pagination and device filtering.
+
 ```
 devicemanager device online-stats [flags]
 ```
@@ -9,24 +15,28 @@ devicemanager device online-stats [flags]
 ### Examples
 
 ```
-  # Query online stats for specific devices in the last 7 days
-  devicemanager device online-stats --device-id 639acc6e078a3d0001be2963 \
-    --start-time 2026-04-23 --end-time 2026-04-30
+  # Query online stats for all devices
+  devicemanager device online-stats --start-time 2026-05-01 --end-time 2026-05-09
 
-  # Query multiple devices
-  devicemanager device online-stats \
-    --device-id 639acc6e078a3d0001be2963 \
-    --device-id 5d6349d6335c8c000178a194 \
-    --start-time 2026-04-23 --end-time 2026-04-30
+  # Filter by device name
+  devicemanager device online-stats --start-time 2026-05-01 --end-time 2026-05-09 --name router
+
+  # Pagination
+  devicemanager device online-stats --start-time 2026-05-01 --end-time 2026-05-09 --limit 50
 ```
 
 ### Options
 
 ```
-      --device-id strings   Device ID(s) to query (required, repeatable)
-      --end-time string     End date exclusive (YYYY-MM-DD) (required)
+      --cursor int          Skip N items (pagination offset)
+      --end-time string     End date (YYYY-MM-DD, set to 23:59:59; if today, use current time) (required)
   -h, --help                help for online-stats
+      --limit int           Number of items per page (default 20)
+      --model string        Filter by device model
+      --name string         Filter by device name
+      --online string       Filter by online status (0=offline, 1=online)
       --start-time string   Start date inclusive (YYYY-MM-DD) (required)
+      --verbose int         Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands

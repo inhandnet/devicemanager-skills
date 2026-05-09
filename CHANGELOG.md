@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.5.4 (2026-05-09)
+
+### New Features
+
+- **Traffic stats**: Add `device traffic stats` to cheatsheet — per-device traffic with filtering and pagination
+- **Online stats**: Update cheatsheet — no longer requires `--device-id`, supports `--name/--model/--online` filters
+
+### Improvements
+
+- **Config export**: Update cheatsheet to note file download and `--file` option
+- **Command references**: Regenerated for v0.5.4
+
+---
+
 ## v0.5.3 (2026-05-09)
 
 ### Improvements
