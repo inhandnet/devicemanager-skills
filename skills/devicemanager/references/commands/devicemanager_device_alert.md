@@ -11,11 +11,11 @@ devicemanager device alert [flags]
 ```
       --cursor int           Skip N items (pagination offset)
       --device-name string   Filter by device name
-      --end-time string      Filter by end time (YYYY-MM-DD or unix timestamp)
+      --end-time string      End time exclusive (YYYY-MM-DD or unix timestamp)
   -h, --help                 help for alert
       --limit int            Number of items per page (default 20)
       --rule-name string     Filter by rule name
-      --start-time string    Filter by start time (YYYY-MM-DD or unix timestamp)
+      --start-time string    Start time inclusive (YYYY-MM-DD or unix timestamp)
       --state string         Filter by state (confirmed/unconfirmed)
       --verbose int          Detail level (1-100, higher = more fields) (default 10)
 ```

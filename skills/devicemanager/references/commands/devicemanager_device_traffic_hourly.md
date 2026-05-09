@@ -19,8 +19,8 @@ devicemanager device traffic hourly <device-id> [flags]
 ### Options
 
 ```
-      --after string    Start date (YYYY-MM-DD)
-      --before string   End date (YYYY-MM-DD, max 6 days from after)
+      --after string    Start date inclusive (YYYY-MM-DD, default: yesterday)
+      --before string   End date exclusive (YYYY-MM-DD, default: tomorrow, max 6 days from after)
   -h, --help            help for hourly
 ```
 

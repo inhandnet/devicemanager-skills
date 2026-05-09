@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.5.3 (2026-05-09)
+
+### Improvements
+
+- **Config get**: Update cheatsheet to note auto-refresh and `--skip-refresh` option
+- **Traffic hourly**: Update cheatsheet to note default 2-day range
+- **Traffic top**: Update cheatsheet with `YYYY-MM` format and default current month
+- **Command references**: Regenerated for v0.5.3
+
+---
+
 ## v0.5.2 (2026-05-08)
 
 ### Bug Fixes

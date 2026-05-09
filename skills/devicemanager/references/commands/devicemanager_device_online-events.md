@@ -21,9 +21,9 @@ devicemanager device online-events <device-id> [flags]
 ### Options
 
 ```
-      --end-time string     End time (YYYY-MM-DD or ISO8601) (required)
+      --end-time string     End time exclusive (YYYY-MM-DD or ISO8601) (required)
   -h, --help                help for online-events
-      --start-time string   Start time (YYYY-MM-DD or ISO8601) (required)
+      --start-time string   Start time inclusive (YYYY-MM-DD or ISO8601) (required)
 ```
 
 ### Options inherited from parent commands

@@ -24,9 +24,9 @@ devicemanager device online-stats [flags]
 
 ```
       --device-id strings   Device ID(s) to query (required, repeatable)
-      --end-time string     End date (YYYY-MM-DD) (required)
+      --end-time string     End date exclusive (YYYY-MM-DD) (required)
   -h, --help                help for online-stats
-      --start-time string   Start date (YYYY-MM-DD) (required)
+      --start-time string   Start date inclusive (YYYY-MM-DD) (required)
 ```
 
 ### Options inherited from parent commands

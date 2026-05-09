@@ -23,11 +23,11 @@ devicemanager system log list [flags]
 
 ```
       --cursor int          Skip N items (pagination offset)
-      --end-time string     End date (YYYY-MM-DD)
+      --end-time string     End date exclusive (YYYY-MM-DD, default: tomorrow)
   -h, --help                help for list
       --level string        Filter by level (info, warning, error)
       --limit int           Number of items per page (default 20)
-      --start-time string   Start date (YYYY-MM-DD)
+      --start-time string   Start date inclusive (YYYY-MM-DD, default: 7 days ago)
       --verbose int         Detail level (1-100, higher = more fields) (default 10)
 ```
 

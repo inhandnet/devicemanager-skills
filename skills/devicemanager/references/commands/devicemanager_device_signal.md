@@ -19,8 +19,8 @@ devicemanager device signal <device-id> [flags]
 ### Options
 
 ```
-      --after string    Start time (ISO 8601, e.g. 2026-05-01T00:00:00Z) (required)
-      --before string   End time (ISO 8601, defaults to now)
+      --after string    Start time inclusive (ISO 8601, e.g. 2026-05-01T00:00:00Z) (required)
+      --before string   End time exclusive (ISO 8601, defaults to now)
   -h, --help            help for signal
 ```
 
