@@ -24,7 +24,7 @@ devicemanager firmware list --model IR915
 步骤 3：确认升级计划
   向用户确认：目标设备、当前版本、目标版本
 
-步骤 4：执行升级
+步骤 4：执行升级（timeout 默认 600 秒）
   devicemanager firmware upgrade <device-id> --firmware-id <firmware-id>
 ```
 
@@ -42,9 +42,10 @@ devicemanager firmware list --model IR915
   devicemanager firmware devices list <firmware-id>
 
 步骤 4：处理失败设备
-  # 查看失败设备后可移除并重试
-  devicemanager firmware devices remove <job-id> <device-id>
-  devicemanager firmware devices add <firmware-id> <device-id>
+  # 重试失败的设备
+  devicemanager firmware retry <job-id> <device-id>
+  # 或取消升级
+  devicemanager firmware cancel <job-id> <device-id>
 ```
 
 ## 上传新固件
@@ -58,7 +59,7 @@ devicemanager firmware list --model IR915
     --model IR915
 
 步骤 2：上传固件文件
-  devicemanager firmware upload <firmware-id> <file-path>
+  devicemanager firmware upload <file-path>
 ```
 
 ## 注意事项

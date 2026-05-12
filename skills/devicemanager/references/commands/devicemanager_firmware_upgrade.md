@@ -15,10 +15,9 @@ devicemanager firmware upgrade <device-id> [flags]
 ### Options
 
 ```
-      --device-name string   Device name
       --firmware-id string   Firmware ID (required)
   -h, --help                 help for upgrade
-      --timeout int          Upgrade timeout (seconds)
+      --timeout int          Upgrade timeout in seconds (required) (default 600)
 ```
 
 ### Options inherited from parent commands
@@ -28,4 +27,5 @@ devicemanager firmware upgrade <device-id> [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

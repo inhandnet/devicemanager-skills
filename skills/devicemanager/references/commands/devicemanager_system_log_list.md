@@ -28,7 +28,6 @@ devicemanager system log list [flags]
       --level string        Filter by level (info, warning, error)
       --limit int           Number of items per page (default 20)
       --start-time string   Start date inclusive (YYYY-MM-DD, default: 7 days ago)
-      --verbose int         Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands
@@ -38,4 +37,5 @@ devicemanager system log list [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

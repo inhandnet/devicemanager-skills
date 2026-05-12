@@ -6,13 +6,21 @@ List users in the organization
 devicemanager system user list [flags]
 ```
 
+### Examples
+
+```
+  # List users in current organization
+  devicemanager system user list
+
+  # List users in a specific organization
+  devicemanager system user list --oid <org-id>
+```
+
 ### Options
 
 ```
-      --cursor int    Skip N items (pagination offset)
-  -h, --help          help for list
-      --limit int     Number of items per page (default 20)
-      --verbose int   Detail level (1-100, higher = more fields) (default 10)
+  -h, --help         help for list
+      --oid string   Organization ID (list users of a specific org)
 ```
 
 ### Options inherited from parent commands
@@ -22,4 +30,5 @@ devicemanager system user list [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

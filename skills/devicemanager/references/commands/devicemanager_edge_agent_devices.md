@@ -10,7 +10,7 @@ devicemanager edge agent devices <agent-id> [flags]
 
 ```
   -h, --help            help for devices
-      --status string   Filter by status (INSTALLING/DOWNLOADING/READY/FAILED)
+      --status string   Filter by status (PENDING/INSTALLING/DOWNLOADING/READY/FAILED)
 ```
 
 ### Options inherited from parent commands
@@ -20,4 +20,5 @@ devicemanager edge agent devices <agent-id> [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

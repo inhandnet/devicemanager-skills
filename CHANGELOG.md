@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.5.5 (2026-05-12)
+
+### New Features
+
+- **Device import**: Add `device import` to cheatsheet — batch import from Excel with `--group` and `--no-overwrite`
+- **Device web**: Add `device web` to cheatsheet — remote web management via ngrok
+- **Edge deploy/undeploy**: Add `edge agent deploy/undeploy`, `edge app deploy/undeploy`, `edge config undeploy` to cheatsheet and edge-computing reference
+- **Edge control remove**: Add `edge control remove` (uninstall app) to cheatsheet and edge-computing reference
+- **Edge device status**: Add `edge device` (query device agent & apps) to cheatsheet and edge-computing reference
+- **Firmware delete/cancel/retry**: Add `firmware delete`, `firmware cancel`, `firmware retry` to cheatsheet and firmware-upgrade reference
+- **User list --oid**: Add `--oid` filter to `system user list` cheatsheet
+- **Org list filters**: Add `--name`/`--email` to `system org list` cheatsheet
+
+### Improvements
+
+- **Task list**: Update cheatsheet with correct `--type` values (`config-apply`, `interactive-command`, etc.) and `--status` values (`running`, `waiting`, `failed`, `completed`)
+- **DRC devices add**: Update cheatsheet to show group-only assignment support
+- **Firmware devices add**: Update cheatsheet to show group-only assignment support
+- **Agent devices status**: Add full status enum (`PENDING/INSTALLING/DOWNLOADING/READY/FAILED`)
+- **Verbose**: Update cheatsheet — global `--verbose` (default 100), GET only
+- **Edge-computing reference**: Add deploy/undeploy/remove/device workflows
+- **Firmware-upgrade reference**: Add cancel/retry workflow, fix upload syntax, note timeout default
+- **Command references**: Regenerated 181 docs for v0.5.5
+
+---
+
 ## v0.5.4 (2026-05-09)
 
 ### New Features

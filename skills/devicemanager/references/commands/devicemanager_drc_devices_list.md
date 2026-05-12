@@ -15,7 +15,6 @@ devicemanager drc devices list <template-id> [flags]
       --name string            Filter by device name
       --serial-number string   Filter by serial number
       --status string          Filter by status (pending/running/failed/completed)
-      --verbose int            Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands
@@ -25,4 +24,5 @@ devicemanager drc devices list <template-id> [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

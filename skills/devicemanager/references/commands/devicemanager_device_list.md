@@ -29,7 +29,6 @@ devicemanager device list [flags]
       --name string            Filter by device name
       --online string          Filter by online status (0=offline, 1=online)
       --serial-number string   Filter by serial number
-      --verbose int            Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands
@@ -39,4 +38,5 @@ devicemanager device list [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```

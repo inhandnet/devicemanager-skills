@@ -14,7 +14,6 @@ devicemanager firmware list [flags]
       --limit int      Number of items per page (default 20)
       --model string   Filter by device model
       --name string    Filter by firmware name
-      --verbose int    Detail level (1-100, higher = more fields) (default 10)
 ```
 
 ### Options inherited from parent commands
@@ -24,4 +23,5 @@ devicemanager firmware list [flags]
       --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
       --jq string        Filter JSON output using a jq expression (implies -o json)
   -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
 ```
