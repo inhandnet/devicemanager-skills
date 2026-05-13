@@ -187,7 +187,7 @@ devicemanager edge agent get <id>                      # 引擎详情
 devicemanager edge agent upload <file>                 # 上传引擎
 devicemanager edge agent update <id>                   # 更新引擎信息
 devicemanager edge agent delete <id>                   # 删除引擎
-devicemanager edge agent devices <id> [--status PENDING|INSTALLING|DOWNLOADING|READY|FAILED]  # 已部署设备
+devicemanager edge agent devices <id> [--status pending|installing|downloading|ready|failed]  # 已部署设备（默认 pending）
 devicemanager edge agent deploy <id> [device-id]... [--group <gid>]    # 部署引擎到设备/分组
 devicemanager edge agent undeploy <id> <device-id>...  # 从设备移除引擎
 
@@ -238,10 +238,10 @@ devicemanager firmware delete <firmware-id>            # 删除固件
 devicemanager firmware upgrade <device-id> --firmware-id <fid>  # 单台升级（timeout 默认 600s）
 devicemanager firmware devices list <firmware-id>      # 批量升级设备列表
 devicemanager firmware devices add <firmware-id> [device-id]... [--group <gid>]  # 添加批量升级设备/分组
-devicemanager firmware devices remove <job-id> <device-id>  # 移除设备
-devicemanager firmware job-stats <job-id>              # 升级任务统计
-devicemanager firmware cancel <job-id> <device-id>     # 取消设备升级
-devicemanager firmware retry <job-id> <device-id>      # 重试设备升级
+devicemanager firmware devices remove <firmware-id> <device-id>  # 移除设备
+devicemanager firmware job-stats <firmware-id>          # 升级任务统计
+devicemanager firmware cancel <firmware-id> <device-id> # 取消设备升级（firmware-id 通过 firmware list 获取）
+devicemanager firmware retry <firmware-id> <device-id>  # 重试设备升级（firmware-id 通过 firmware list 获取）
 ```
 
 ### 系统管理

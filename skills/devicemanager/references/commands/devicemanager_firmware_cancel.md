@@ -2,8 +2,22 @@
 
 Cancel a firmware upgrade task for a device
 
+### Synopsis
+
+Cancel a device's firmware upgrade task. The firmware-id can be found via 'firmware list'.
+
 ```
-devicemanager firmware cancel <job-id> <device-id> [flags]
+devicemanager firmware cancel <firmware-id> <device-id> [flags]
+```
+
+### Examples
+
+```
+  # Cancel upgrade for a device
+  devicemanager firmware cancel <firmware-id> <device-id>
+
+  # Find firmware IDs first
+  devicemanager firmware list
 ```
 
 ### Options

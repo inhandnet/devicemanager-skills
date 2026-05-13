@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.5.6 (2026-05-13)
+
+### Bug Fixes (CLI v0.5.6 sync)
+
+- **Auth impersonate**: Fix resolving wrong user when using org name — now resolves org name → ObjectID first; reports error on ambiguous org names
+- **DRC commands**: All DRC commands now pass `oid` query parameter, fixing wrong org data after impersonation
+- **DRC/firmware devices add**: Always send both `deviceIds` and `deviceGroupIds` (even as empty arrays), fixing `Service unavailable` error
+- **Firmware cancel**: Simplified to `DELETE /api/job/{firmwareID}/devices/{deviceID}`
+- **File upload 400**: `device import`, `firmware upload`, `edge agent upload`, `edge version upload` now pass `access_token` as query parameter instead of Authorization header
+- **Device web**: Add polling for task completion instead of only checking initial response
+- **Edge agent devices**: `--status` now defaults to `pending` (required by API); values corrected to lowercase
+
+### Improvements
+
+- **Firmware cheatsheet**: `firmware cancel/retry/job-stats/devices remove` renamed `<job-id>` → `<firmware-id>` with usage hints
+- **Edge agent devices cheatsheet**: Status values corrected to lowercase, default noted
+- **System user list**: Auto-applies `oid` from impersonated context
+- **Command references**: Regenerated 181 docs for v0.5.6
+
+---
+
 ## v0.5.5 (2026-05-12)
 
 ### New Features

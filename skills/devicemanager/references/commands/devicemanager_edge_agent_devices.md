@@ -10,7 +10,7 @@ devicemanager edge agent devices <agent-id> [flags]
 
 ```
   -h, --help            help for devices
-      --status string   Filter by status (PENDING/INSTALLING/DOWNLOADING/READY/FAILED)
+      --status string   Filter by status (pending, installing, downloading, ready, failed) (default "pending")
 ```
 
 ### Options inherited from parent commands

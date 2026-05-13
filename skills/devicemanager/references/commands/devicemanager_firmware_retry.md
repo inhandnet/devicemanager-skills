@@ -2,8 +2,22 @@
 
 Retry a firmware upgrade task for a device
 
+### Synopsis
+
+Retry a failed firmware upgrade for a device. The firmware-id can be found via 'firmware list'.
+
 ```
-devicemanager firmware retry <job-id> <device-id> [flags]
+devicemanager firmware retry <firmware-id> <device-id> [flags]
+```
+
+### Examples
+
+```
+  # Retry upgrade for a device
+  devicemanager firmware retry <firmware-id> <device-id>
+
+  # Check which devices failed
+  devicemanager firmware devices list <firmware-id> --status failed
 ```
 
 ### Options
