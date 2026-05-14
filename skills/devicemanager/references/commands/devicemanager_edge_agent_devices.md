@@ -9,7 +9,9 @@ devicemanager edge agent devices <agent-id> [flags]
 ### Options
 
 ```
+      --cursor int      Skip N items (pagination offset)
   -h, --help            help for devices
+      --limit int       Number of items per page (default 20)
       --status string   Filter by status (PENDING, INSTALLING, DOWNLOADING, READY, FAILED) (default "PENDING")
 ```
 

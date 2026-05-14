@@ -189,7 +189,7 @@ devicemanager edge agent get <id>                      # 引擎详情
 devicemanager edge agent upload <file>                 # 上传引擎
 devicemanager edge agent update <id>                   # 更新引擎信息
 devicemanager edge agent delete <id>                   # 删除引擎
-devicemanager edge agent devices <id> [--status PENDING|INSTALLING|DOWNLOADING|READY|FAILED]  # 已部署设备（默认 PENDING）
+devicemanager edge agent devices <id> [--status PENDING|INSTALLING|DOWNLOADING|READY|FAILED] [--limit <n>]  # 已部署设备（默认 PENDING，支持分页）
 devicemanager edge agent deploy <id> [device-id]... [--group <gid>]    # 部署引擎到设备/分组
 devicemanager edge agent undeploy <id> <device-id>...  # 从设备移除引擎
 

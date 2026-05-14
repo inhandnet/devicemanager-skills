@@ -8,6 +8,7 @@
 - **Device web polling removed**: Reverted to single `POST /api2/tasks/run` (backend already blocks until completion)
 - **Device import body**: Added required `publicAttribute` wrapper; fixed query param encoding with `client.Do`
 - **Edge agent devices status**: API requires uppercase (`PENDING/INSTALLING/DOWNLOADING/READY/FAILED`); default and cheatsheet corrected
+- **Edge agent devices pagination**: Add `--cursor` and `--limit` pagination support
 
 ### Improvements
 
