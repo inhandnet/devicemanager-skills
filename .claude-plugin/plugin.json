@@ -1,6 +1,6 @@
 {
   "name": "devicemanager",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "Skills for managing Device Manager platform via devicemanager CLI",
   "author": {
     "name": "inhandnet"

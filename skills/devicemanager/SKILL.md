@@ -81,6 +81,8 @@ devicemanager config current-context                   # 当前环境
 devicemanager config list-contexts                     # 列出所有环境
 devicemanager config use-context <name>                # 切换环境
 devicemanager config delete-context <name>             # 删除环境
+devicemanager config set ngrok-server <host:port>      # 设置全局 ngrok 服务器
+devicemanager config get ngrok-server                  # 查看当前全局配置
 ```
 
 ### 设备
@@ -102,7 +104,7 @@ devicemanager device config set <id> --content <json>  # 下发配置
 devicemanager device config export <id> [--file <path>] # 导出配置（默认当前目录）
 devicemanager device alert                             # 告警记录
 devicemanager device alert-ack <alert-id>              # 确认告警
-devicemanager device web <id> [--port <p>] [--proto http|https]  # 远程 web 管理
+devicemanager device web <id> [--port <p>] [--proto http|https] [--server <host:port>]  # 远程 web 管理（server 自动推断，可覆盖）
 devicemanager device clients list <id>                 # 连接客户端
 devicemanager device clients batch                     # 批量查询客户端
 devicemanager device traffic monthly <month> <id>      # 月度流量
@@ -187,7 +189,7 @@ devicemanager edge agent get <id>                      # 引擎详情
 devicemanager edge agent upload <file>                 # 上传引擎
 devicemanager edge agent update <id>                   # 更新引擎信息
 devicemanager edge agent delete <id>                   # 删除引擎
-devicemanager edge agent devices <id> [--status pending|installing|downloading|ready|failed]  # 已部署设备（默认 pending）
+devicemanager edge agent devices <id> [--status PENDING|INSTALLING|DOWNLOADING|READY|FAILED]  # 已部署设备（默认 PENDING）
 devicemanager edge agent deploy <id> [device-id]... [--group <gid>]    # 部署引擎到设备/分组
 devicemanager edge agent undeploy <id> <device-id>...  # 从设备移除引擎
 

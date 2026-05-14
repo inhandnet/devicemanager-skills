@@ -1,28 +1,22 @@
-## devicemanager device web
+## devicemanager config set
 
-Start remote web management for a device
+Set a global configuration value
 
 ```
-devicemanager device web <device-id> [flags]
+devicemanager config set <key> <value> [flags]
 ```
 
 ### Examples
 
 ```
-  # Start remote web management
-  devicemanager device web <device-id>
-
-  # Use custom port
-  devicemanager device web <device-id> --port 443 --proto https
+  # Set custom ngrok server
+  devicemanager config set ngrok-server my-ngrok.example.com:4443
 ```
 
 ### Options
 
 ```
-  -h, --help            help for web
-      --port int        Device web management port (default 80)
-      --proto string    Protocol (http/https) (default "http")
-      --server string   Ngrok server address (overrides auto-detect)
+  -h, --help   help for set
 ```
 
 ### Options inherited from parent commands

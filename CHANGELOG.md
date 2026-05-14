@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.5.7 (2026-05-13)
+
+### Bug Fixes (CLI v0.5.7 sync)
+
+- **Device web default server**: Auto-detected from API host — `ngrok.iot.inhandnetworks.com:4443` (global), `iot.inhand.com.cn:4443` (cn), or `10.5.17.52:4443` (other); override via `--server` or `config set ngrok-server`
+- **Device web polling removed**: Reverted to single `POST /api2/tasks/run` (backend already blocks until completion)
+- **Device import body**: Added required `publicAttribute` wrapper; fixed query param encoding with `client.Do`
+- **Edge agent devices status**: API requires uppercase (`PENDING/INSTALLING/DOWNLOADING/READY/FAILED`); default and cheatsheet corrected
+
+### Improvements
+
+- **Configuration commands**: Add `config set` and `config get` to cheatsheet for managing global settings
+- **Command references**: Regenerated 183 docs for v0.5.7
+
+---
+
 ## v0.5.6 (2026-05-13)
 
 ### Bug Fixes (CLI v0.5.6 sync)
@@ -9,13 +25,10 @@
 - **DRC/firmware devices add**: Always send both `deviceIds` and `deviceGroupIds` (even as empty arrays), fixing `Service unavailable` error
 - **Firmware cancel**: Simplified to `DELETE /api/job/{firmwareID}/devices/{deviceID}`
 - **File upload 400**: `device import`, `firmware upload`, `edge agent upload`, `edge version upload` now pass `access_token` as query parameter instead of Authorization header
-- **Device web**: Add polling for task completion instead of only checking initial response
-- **Edge agent devices**: `--status` now defaults to `pending` (required by API); values corrected to lowercase
 
 ### Improvements
 
 - **Firmware cheatsheet**: `firmware cancel/retry/job-stats/devices remove` renamed `<job-id>` → `<firmware-id>` with usage hints
-- **Edge agent devices cheatsheet**: Status values corrected to lowercase, default noted
 - **System user list**: Auto-applies `oid` from impersonated context
 - **Command references**: Regenerated 181 docs for v0.5.6
 
