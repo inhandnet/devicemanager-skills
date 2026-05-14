@@ -202,6 +202,8 @@ devicemanager edge app delete <id>                     # 删除应用
 devicemanager edge app logs <device-id> <app-name>     # 查看应用运行日志
 devicemanager edge app deploy <id> --version <v> [device-id]... [--group <gid>]  # 部署应用到设备/分组
 devicemanager edge app undeploy <id> <device-id>...    # 取消应用部署
+devicemanager edge app devices <app-id>                  # 应用安装设备列表（默认 PENDING）
+devicemanager edge app devices <app-id> --status READY   # 按状态筛选
 
 # 版本
 devicemanager edge version list <app-id>               # 版本列表
@@ -218,6 +220,8 @@ devicemanager edge config update <app-id> <config-id>  # 更新配置
 devicemanager edge config delete <app-id> <config-id>  # 删除配置
 devicemanager edge config deploy <app-id> <config-id>  # 部署配置到设备
 devicemanager edge config undeploy <app-id> <device-id>...  # 取消配置部署
+devicemanager edge config devices <app-id>                # 应用配置设备列表（默认 PENDING）
+devicemanager edge config devices <app-id> --status READY # 按状态筛选
 
 # 远程控制
 devicemanager edge control start <device-id> <app-id>    # 启动应用

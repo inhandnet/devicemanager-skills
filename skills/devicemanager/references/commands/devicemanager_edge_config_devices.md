@@ -1,0 +1,26 @@
+## devicemanager edge config devices
+
+List devices with an edge app config deployed
+
+```
+devicemanager edge config devices <app-id> [flags]
+```
+
+### Options
+
+```
+      --cursor int      Skip N items (pagination offset)
+  -h, --help            help for devices
+      --limit int       Number of items per page (default 20)
+      --status string   Filter by status (PENDING, INSTALLING, DOWNLOADING, READY, FAILED) (default "PENDING")
+```
+
+### Options inherited from parent commands
+
+```
+      --context string   Override active context (env: DEVICEMANAGER_CONTEXT)
+      --debug            Enable debug output (env: DEVICEMANAGER_DEBUG)
+      --jq string        Filter JSON output using a jq expression (implies -o json)
+  -o, --output string    Output format: json, table, yaml (default: table for TTY, json otherwise)
+      --verbose int      API response detail level (1-100, higher = more fields) (default 100)
+```

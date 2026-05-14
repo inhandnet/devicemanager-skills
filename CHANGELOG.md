@@ -12,7 +12,9 @@
 ### Improvements
 
 - **Configuration commands**: Add `config set` and `config get` to cheatsheet for managing global settings
-- **Command references**: Regenerated 183 docs for v0.5.7
+- **Edge app devices**: Add `edge app devices` to list devices with an edge app deployed
+- **Edge config devices**: Add `edge config devices` to list devices with an edge app config deployed
+- **Command references**: Regenerated 185 docs for v0.5.7
 
 ---
 
