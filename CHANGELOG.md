@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.5.8 (2026-05-14)
+
+### New Features
+
+- **Edge app devices**: Add `edge app devices` to list devices with an edge app deployed; supports `--status` and pagination
+- **Edge config devices**: Add `edge config devices` to list devices with an edge app config deployed; supports `--status` and pagination
+
+### Improvements
+
+- **Edge agent devices pagination**: Add `--cursor` and `--limit` pagination support
+- **Command references**: Regenerated 185 docs for v0.5.8
+
+---
+
 ## v0.5.7 (2026-05-13)
 
 ### Bug Fixes (CLI v0.5.7 sync)
@@ -8,14 +22,11 @@
 - **Device web polling removed**: Reverted to single `POST /api2/tasks/run` (backend already blocks until completion)
 - **Device import body**: Added required `publicAttribute` wrapper; fixed query param encoding with `client.Do`
 - **Edge agent devices status**: API requires uppercase (`PENDING/INSTALLING/DOWNLOADING/READY/FAILED`); default and cheatsheet corrected
-- **Edge agent devices pagination**: Add `--cursor` and `--limit` pagination support
 
 ### Improvements
 
 - **Configuration commands**: Add `config set` and `config get` to cheatsheet for managing global settings
-- **Edge app devices**: Add `edge app devices` to list devices with an edge app deployed
-- **Edge config devices**: Add `edge config devices` to list devices with an edge app config deployed
-- **Command references**: Regenerated 185 docs for v0.5.7
+- **Command references**: Regenerated 181 docs for v0.5.7
 
 ---
 
